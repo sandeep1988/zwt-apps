@@ -1,0 +1,679 @@
+<link rel="stylesheet" type="text/css" href="/assets/select2/select2.css"/>
+<link rel="stylesheet" type="text/css" href="assets/todo.css"/>
+<div class="page-container">
+            <!-- BEGIN PAGE HEAD -->
+            <div class="page-head">
+                <div class="container">
+                    <!-- BEGIN PAGE TITLE -->
+                    <div class="page-title">
+                        <h1>Projects <small>Find a projects</small></h1>
+                    </div>
+                    <!-- END PAGE TITLE -->
+                    <!-- BEGIN PAGE TOOLBAR -->
+                    <div class="page-toolbar">
+                        <!-- BEGIN THEME PANEL -->
+                        <div class="btn-group btn-theme-panel">
+                            <a href="javascript:;" class="btn dropdown-toggle"  data-hover="dropdown" data-toggle="dropdown">
+                                <i class="icon-settings"></i>
+                            </a>
+                            <ul class="dropdown-menu pull-right">
+                                <li>
+                                    <a href="profile_account.html">
+                                        <i class="icon-settings"></i>Settings </a>
+                                </li>
+                                <li class="divider">
+                                </li>
+                                <li>
+                                    <a href="employee.html">Employees </a>
+                                </li>
+                                <li>
+                                    <a href="employee_static_doc.html">Documentation </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- END PAGE TOOLBAR -->
+                </div>
+            </div>
+            <!-- END PAGE HEAD -->
+            <!-- BEGIN PAGE CONTENT -->
+            <div class="page-content">
+                <div class="container">
+                    <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+                    <div class="modal fade" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                                    <h4 class="modal-title">Modal title</h4>
+                                </div>
+                                <div class="modal-body">
+                                    Widget settings form goes here
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn blue">Save changes</button>
+                                    <button type="button" class="btn default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                            <!-- /.modal-content -->
+                        </div>
+                        <!-- /.modal-dialog -->
+                    </div>
+                    <!-- /.modal -->
+                    <!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+                    <!-- BEGIN PAGE BREADCRUMB -->
+                    <ul class="page-breadcrumb breadcrumb">
+                        <li>
+                            <a href="#">Dashboard</a><i class="fa fa-circle"></i>
+                        </li>
+                        <li class="active">
+                            Projects
+                        </li>
+                    </ul>
+                    <!-- END PAGE BREADCRUMB -->
+                    <!-- BEGIN PAGE CONTENT INNER -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- BEGIN TODO SIDEBAR -->
+                            <div class="todo-sidebar">
+                                <div class="portlet light">
+                                    <div class="portlet-title">
+                                        <div class="caption" data-toggle="collapse" data-target=".todo-project-list-content">
+                                            <span class="caption-subject font-green-sharp bold uppercase">Projects </span>
+                                        </div>
+                                        <div class="actions">
+                                            <div class="btn-group">
+                                                <a class="btn green-haze btn-circle btn-sm todo-projects-config" href="javascript:;" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                                    <i class="icon-settings"></i> &nbsp; <i class="fa fa-angle-down"></i>
+                                                </a>
+                                                <ul class="dropdown-menu pull-right">
+                                                    <li>
+                                                        <a href="deve_public_submit_form.html">
+                                                            <i class="i"></i> Add a project </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <form action="javascript:void(0)" method="post" id="form_sample_5">
+                                        <div class="form-group margin-top-20">
+                                            <div class="col">
+                                                <select class="form-control select2me" name="current_stage">
+                                                    <option value="">Select Current Stage</option>
+                                                    <option value="Discovery">Discovery Stage</option>
+                                                    <option value="Due Diligence">Due Diligence Stage</option>
+                                                    <option value="Acquisition">Acquisition Stage</option>
+                                                    <option value="Construction">Construction Stage</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group margin-top-20">
+                                            <div class="col">
+                                                <select class="form-control select2me" name="current_status">
+                                                    <option value="">Select Current Status</option>
+                                                    <option value="Active">Active</option>
+                                                    <option value="Maybe">Maybe</option>
+                                                    <option value="On Hold">On Hold</option>
+                                                    <option value="Closed">Closed</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group margin-top-20">
+                                            <div class="col">
+                                                <select class="form-control select2me" name="rel_manager">
+                                                    <option value="">Select Relationship Managers</option>
+                                                    <option value="<a href="employee_detail_account.html">Lauren R. Moon</a>"><a href="employee_detail_account.html">Lauren R. Moon</a></option>
+                                                    <option value="<a href="employee_detail_account.html">Susan J. Pippin</a>"><a href="employee_detail_account.html">Susan J. Pippin</a></option>
+                                                    <option value="<a href="employee_detail_account.html">Edit/destroy</a>"><a href="employee_detail_account.html">Edit/destroy</a></option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="margin-top-10 text-right">
+                                            <a href="#" class="btn red">Clear </a>
+                                            <input type="submit" class="btn green" value="Go">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- END TODO SIDEBAR -->
+                            <!-- BEGIN TODO CONTENT -->
+                            <div class="todo-content">
+                                <div class="portlet light">
+                                    <div class="portlet-title no-border margin-bottom-0 col-md-4">
+                                        <div class="caption">
+                                            <span class="caption-subject font-green-sharp bold uppercase">Showing: All Projects</span>
+                                        </div>                               
+                                    </div>
+                                    <div class="portlet-body">
+                                        <table class="table table-striped table-bordered table-hover" id="sample_1">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        Sales ID
+                                                    </th>
+                                                    <th>
+                                                        First name
+                                                    </th>
+                                                    <th>
+                                                        Last Name
+                                                    </th>
+                                                    <th>
+                                                        Email
+                                                    </th>
+                                                    <th>
+                                                        Phone
+                                                    </th>
+                                                    <th>
+                                                        Status
+                                                    </th>
+                                                    <th> Relationship Manager</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a href="project_detail.html">P-150115-001</a>
+                                                    </td>
+                                                    <td><a href="project_detail.html">Test1</a></td>
+                                                    <td>
+                                                         <a href="deve_detail.html">Joshua L. Pickett</a>
+                                                    </td>
+                                                    <td>test@gmail.com</td>
+                                                    <td>
+                                                        Discovery Stage
+                                                    </td>
+                                                    <td>
+                                                        Active
+                                                    </td>
+                                                    <td><a href="sales/1/edit">Edit</a> | <a href="sales/">Delete</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="project_detail.html">P-150115-002</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="project_detail.html">Test2</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="deve_detail.html">
+                                                            Harold H. Felix
+                                                        </a>
+                                                    </td>
+                                                    <td>test1@gmail.com</td>
+                                                    <td>
+                                                        Due Diligence Stage
+                                                    </td>
+                                                    <td>
+                                                        Active
+                                                  </td>
+                                                    <td>
+                                                        <a href="sales/1/edit">Edit</a> | <a href="sales/">Delete</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="project_detail.html">P-150115-003</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="project_detail.html">Test3</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="deve_detail.html">
+                                                            Margie J. Reid
+                                                        </a>
+                                                    </td>
+                                                    <td>test@gmail.com</td>
+                                                    <td>
+                                                        Discovery Stage
+                                                    </td>
+                                                    <td>
+                                                        Active
+                                                    </td>
+                                                    <td><a href="sales/1/edit">Edit</a> | <a href="sales/">Delete</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="project_detail.html">P-150115-004</a>
+                                                    </td>
+                                                    <td><a href="project_detail.html">Test4</a></td>
+                                                    <td>
+                                                        <a href="deve_detail.html">
+                                                            Ben T. West
+                                                        </a>
+                                                    </td>
+                                                    <td>test@gmail.com</td>
+                                                    <td>
+                                                        Acquisition Stage
+                                                    </td>
+                                                    <td>
+                                                        Active
+                                                    </td>
+                                                    <td><a href="sales/1/edit">Edit</a> | <a href="sales/">Delete</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="project_detail.html">P-150115-005</a>
+                                                    </td>
+                                                    <td><a href="project_detail.html">Test5</a></td>
+                                                    <td>
+                                                        <a href="deve_detail.html">
+                                                            Amber H. Duncan
+                                                        </a>
+                                                    </td>
+                                                    <td>test1@gmail.com</td>
+                                                    <td>
+                                                        Construction Stage
+                                                    </td>
+                                                    <td>
+                                                        Maybe
+                                                    </td>
+                                                    <td><a href="sales/1/edit">Edit</a> | <a href="sales/">Delete</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="project_detail.html">P-150115-006</a>
+                                                    </td>
+                                                    <td><a href="project_detail.html">Test6</a></td>
+                                                    <td>
+                                                        <a href="deve_detail.html">
+                                                            Susan J. Giddings
+                                                        </a>
+                                                    </td>
+                                                    <td>test@gmail.com</td>
+                                                    <td>
+                                                        Acquisition Stage
+                                                    </td>
+                                                    <td>
+                                                        Active
+                                                    </td>
+                                                    <td><a href="sales/1/edit">Edit</a> | <a href="sales/">Delete</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="project_detail.html">P-150115-007</a>
+                                                    </td>
+                                                    <td><a href="project_detail.html">Test7</a> </td>
+                                                    <td>
+                                                        <a href="deve_detail.html">
+                                                            Benjamin E. Derose
+                                                        </a>
+                                                    </td>
+                                                    <td>test@gmail.com</td>
+                                                    <td>
+                                                        Due Diligence Stage
+                                                    </td>
+                                                    <td>
+                                                        Maybe
+                                                    </td>
+                                                    <td><a href="sales/1/edit">Edit</a> | <a href="sales/">Delete</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="project_detail.html">P-150115-008</a>
+                                                    </td>
+                                                    <td><a href="project_detail.html">Test8</a> </td>
+                                                    <td>
+                                                        <a href="deve_detail.html">
+                                                            Leonor A. Smith
+                                                        </a>
+                                                    </td>
+                                                    <td>test@gmail.com</td>
+                                                    <td>
+                                                        Acquisition Stage
+                                                    </td>
+                                                    <td>
+                                                        Active
+                                                    </td>
+                                                    <td><a href="sales/1/edit">Edit</a> | <a href="sales/">Delete</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="project_detail.html">P-150115-009</a>
+                                                    </td>
+                                                    <td><a href="project_detail.html">Test9</a></td>
+                                                    <td>
+                                                        <a href="deve_detail.html">
+                                                            Robert L. Purpura
+                                                        </a>
+                                                    </td>
+                                                    <td>test1@gmail.com</td>
+                                                    <td>
+                                                        Discovery Stage
+                                                    </td>
+                                                    <td>
+                                                        Active
+                                                    </td>
+                                                    <td><a href="sales/1/edit">Edit</a> | <a href="sales/">Delete</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="project_detail.html">P-150115-010</a>
+                                                    </td>
+                                                    <td><a href="project_detail.html">Test10</a></td>
+                                                    <td>
+                                                        <a href="deve_detail.html">
+                                                            Darryl P. Goss
+                                                        </a>
+                                                    </td>
+                                                    <td>test@gmail.com</td>
+                                                    <td>
+                                                        Construction Stage
+                                                    </td>
+                                                    <td>
+                                                        Maybe
+                                                    </td>
+                                                    <td><a href="sales/1/edit">Edit</a> | <a href="sales/">Delete</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="project_detail.html">P-150115-011</a>
+                                                    </td>
+                                                    <td><a href="project_detail.html">Test11 </a></td>
+                                                    <td>
+                                                        <a href="deve_detail.html">
+                                                            Brenda F. Pearson
+                                                        </a>
+                                                    </td>
+                                                    <td>test@gmail.com</td>
+                                                    <td>
+                                                        Due Diligence Stage
+                                                    </td>
+                                                    <td>
+                                                        Active
+                                                    </td>
+                                                    <td><a href="sales/1/edit">Edit</a> | <a href="sales/">Delete</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="project_detail.html">P-150115-012</a>
+                                                    </td>
+                                                    <td><a href="project_detail.html">Test12 </a></td>
+                                                    <td>
+                                                        <a href="deve_detail.html">
+                                                            Peter N. Corson
+                                                        </a>
+                                                    </td>
+                                                    <td>test@gmail.com</td>
+                                                    <td>
+                                                        Discovery Stage
+                                                    </td>
+                                                    <td>
+                                                        Active
+                                                    </td>
+                                                    <td><a href="sales/1/edit">Edit</a> | <a href="sales/">Delete</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="project_detail.html">P-150115-013</a>
+                                                    </td>
+                                                    <td><a href="project_detail.html">Test13 </a></td>
+                                                    <td>
+                                                        <a href="deve_detail.html">
+                                                            Elsie N. Couch
+                                                        </a>
+                                                    </td>
+                                                    <td>test@gmail.com</td>
+                                                    <td>
+                                                        Acquisition Stage
+                                                    </td>
+                                                    <td>
+                                                        Active
+                                                    </td>
+                                                    <td><a href="sales/1/edit">Edit</a> | <a href="sales/">Delete</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="project_detail.html">P-150115-014</a>
+                                                    </td>
+                                                    <td><a href="project_detail.html">Test14</a></td>
+                                                    <td>
+                                                        <a href="deve_detail.html">
+                                                            Wesley G. Sullivan
+                                                        </a>
+                                                    </td>
+                                                    <td>test@gmail.com</td>
+                                                    <td>
+                                                        Discovery Stage
+                                                    </td>
+                                                    <td>
+                                                        On Hold
+                                                    </td>
+                                                    <td><a href="sales/1/edit">Edit</a> | <a href="sales/">Delete</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="project_detail.html">P-150115-015</a>
+                                                    </td>
+                                                    <td><a href="project_detail.html">Test15</a></td>
+                                                    <td>
+                                                        <a href="deve_detail.html">
+                                                            Yvonne P. Schaefer
+                                                        </a>
+                                                    </td>
+                                                    <td>test11@gmail.com</td>
+                                                    <td>
+                                                        Construction Stage
+                                                    </td>
+                                                    <td>
+                                                        Active
+                                                    </td>
+                                                    <td><a href="sales/1/edit">Edit</a> | <a href="sales/">Delete</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="project_detail.html">P-150115-016</a>
+                                                    </td>
+                                                    <td><a href="project_detail.html">Test16</a> </td>
+                                                    <td>
+                                                        <a href="deve_detail.html">
+                                                            Clifton A. Hurtt
+                                                        </a>
+                                                    </td>
+                                                    <td>test@gmail.com</td>
+                                                    <td>
+                                                        Due Diligence Stage
+                                                    </td>
+                                                    <td>
+                                                        Active
+                                                    </td>
+                                                    <td><a href="sales/1/edit">Edit</a> | <a href="sales/">Delete</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="project_detail.html">P-150115-017</a>
+                                                    </td>
+                                                    <td><a href="project_detail.html">Test17</a></td>
+                                                    <td>
+                                                        <a href="deve_detail.html">
+                                                            Thelma J. Raines
+                                                        </a>
+                                                    </td>
+                                                    <td>test11@gmail.com</td>
+                                                    <td>
+                                                        Discovery Stage
+                                                    </td>
+                                                    <td>
+                                                        Maybe
+                                                    </td>
+                                                    <td><a href="sales/1/edit">Edit</a> | <a href="sales/">Delete</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="project_detail.html">P-150115-018</a>
+                                                    </td>
+                                                    <td><a href="project_detail.html">Test18</a></td>
+                                                    <td>
+                                                        <a href="deve_detail.html">
+                                                            Maribel D. Ferguson 
+                                                        </a>
+                                                    </td>
+                                                    <td>test22@gmail.com</td>
+                                                    <td>
+                                                        Acquisition Stage
+                                                    </td>
+                                                    <td>
+                                                        Active
+                                                    </td>
+                                                    <td><a href="sales/1/edit">Edit</a> | <a href="sales/">Delete</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="project_detail.html">P-150115-019</a>
+                                                    </td>
+                                                    <td><a href="project_detail.html">Test19</a></td>
+                                                    <td>
+                                                        <a href="deve_detail.html">
+                                                            Miriam M. Troy
+                                                        </a>
+                                                    </td>
+                                                    <td>test22@gmail.com</td>
+                                                    <td>
+                                                        Due Diligence Stage
+                                                    </td>
+                                                    <td>
+                                                        Active
+                                                    </td>
+                                                    <td><a href="sales/1/edit">Edit</a> | <a href="sales/">Delete</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="project_detail.html">P-150115-020</a>
+                                                    </td>
+                                                    <td><a href="project_detail.html">Test20</a></td>
+                                                    <td>
+                                                        <a href="deve_detail.html">
+                                                            Lola H. Solomon
+                                                        </a>
+                                                    </td>
+                                                    <td>test11@gmail.com</td>
+                                                    <td>
+                                                        Construction Stage
+                                                    </td>
+                                                    <td>
+                                                        On Hold
+                                                    </td>
+                                                    <td><a href="sales/1/edit">Edit</a> | <a href="sales/">Delete</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="project_detail.html">P-150115-021</a>
+                                                    </td>
+                                                    <td><a href="project_detail.html">Test21 </a></td>
+                                                    <td>
+                                                        <a href="deve_detail.html">
+                                                            Charles M. Brown
+                                                        </a>
+                                                    </td>
+                                                    <td>test@gmail.com</td>
+                                                    <td>
+                                                        Due Diligence Stage
+                                                    </td>
+                                                    <td>
+                                                        Active
+                                                    </td>
+                                                    <td><a href="sales/1/edit">Edit</a> | <a href="sales/">Delete</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="project_detail.html">P-150115-022</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="project_detail.html">
+                                                            Test22
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="deve_detail.html">
+                                                            Marco M. Nelson
+                                                        </a>
+                                                    </td>
+                                                    <td>test22@gmail.com</td>
+                                                    <td>
+                                                        Acquisition Stage
+                                                    </td>
+                                                    <td>
+                                                        Maybe
+                                                    </td>
+                                                    <td><a href="sales/1/edit">Edit</a> | <a href="sales/">Delete</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="project_detail.html">P-150115-023</a>
+                                                    </td>
+                                                    <td><a href="project_detail.html">Test23</a></td>
+                                                    <td>
+                                                        <a href="deve_detail.html">
+                                                            Thelma J. Raines
+                                                        </a>
+                                                    </td>
+                                                    <td>test11@gmail.com</td>
+                                                    <td>
+                                                        Discovery Stage
+                                                    </td>
+                                                    <td>
+                                                        Active
+                                                    </td>
+                                                    <td><a href="sales/1/edit">Edit</a> | <a href="sales/">Delete</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="project_detail.html">P-150115-024</a>
+                                                    </td>
+                                                    <td><a href="project_detail.html">Test24</a></td>
+                                                    <td>
+                                                        <a href="deve_detail.html">
+                                                            Elaine R. Kopecky
+                                                        </a>
+                                                    </td>
+                                                    <td>test@gmail.com</td>
+                                                    <td>
+                                                        Due Diligence Stage
+                                                    </td>
+                                                    <td>
+                                                        Closed
+                                                    </td>
+                                                    <td><a href="sales/1/edit">Edit</a> | <a href="sales/">Delete</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="project_detail.html">P-150115-025</a>
+                                                    </td>
+                                                    <td><a href="project_detail.html">Test25</a></td>
+                                                    <td>
+                                                        <a href="deve_detail.html">
+                                                            Anthony K. Davis
+                                                        </a>
+                                                    </td>
+                                                    <td>test@gmail.com</td>
+                                                    <td>
+                                                        Acquisition Stage
+                                                    </td>
+                                                    <td>
+                                                        Active
+                                                    </td>
+                                                    <td><a href="sales/1/edit">Edit</a> | <a href="sales/">Delete</a></td>
+                                                </tr>
+                                                
+                          
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END TODO CONTENT -->
+                        </div>
+                    </div>
+                    <!-- END PAGE CONTENT INNER -->
+                </div>
+            </div>
+            <!-- END PAGE CONTENT -->
+        </div>
+        <!-- END PAGE CONTAINER -->
+        <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+        <!-- BEGIN CORE PLUGINS -->
+        <!--[if lt IE 9]>
+<script src="plugins/respond.min.js"></script>
+<script src="plugins/excanvas.min.js"></script> 
+<![endif]-->
+        <!-- END JAVASCRIPTS -->
