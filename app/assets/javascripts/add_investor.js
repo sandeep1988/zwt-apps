@@ -34,7 +34,20 @@ var Login = function() {
                 },
                 add_inv5: {
                     required: true
+                },
+                add_inv6: {
+                    required: true
+                },
+                add_inv7: {
+                    required: true
+                },
+                add_inv8: {
+                    required: true
+                },
+                add_inv9: {
+                    required: true
                 }
+
             },
 
             messages: {
