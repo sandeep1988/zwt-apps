@@ -129,14 +129,26 @@ License: You must have a valid license purchased only from themeforest(the above
                             <li>
                                 <a href="#" class="tooltips" data-container="body" data-placement="bottom" data-html="true" data-original-title="Dashboard to view the overall status.">Dashboard</a>
                             </li>
+                        <% if params[:controller] == "sales" %>
+                            <li class="active">
+                                <a href="/sales" class="tooltips" data-container="body" data-placement="bottom" data-html="true" data-original-title="List of all sales.">Sales</a>
+                            </li>
+                        <% else %>
                             <li>
                                 <a href="/sales" class="tooltips" data-container="body" data-placement="bottom" data-html="true" data-original-title="List of all sales.">Sales</a>
                             </li>
-
+                        <% end %>
+                        
+                         <% if params[:controller] == "contacts" %>
+                            <li class="active">
+                                <a href="/contacts" class="tooltips" data-container="body" data-placement="bottom" data-html="true" data-original-title="Contact Detail">Contacts</a>
+                            </li>
+                        <% else %>
                             <li>
                                 <a href="/contacts" class="tooltips" data-container="body" data-placement="bottom" data-html="true" data-original-title="Contact Detail">Contacts</a>
                             </li>
-                            <li class="active">
+                        <% end %>
+                            <li>
                                 <a href="javascript:;" class="tooltips" data-container="body" data-placement="bottom" data-html="true" data-original-title="Cases Detail">Cases</a>
                             </li>
                         </ul>

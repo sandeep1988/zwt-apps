@@ -46,8 +46,13 @@ var Login = function() {
                 },
                 add_inv9: {
                     required: true
+                },
+                add_inv10: {
+                    required: true
+                },
+                add_inv11: {
+                    required: true
                 }
-
             },
 
             messages: {

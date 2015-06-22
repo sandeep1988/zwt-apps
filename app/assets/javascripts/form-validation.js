@@ -53,7 +53,23 @@ var FormValidation = function () {
                 },
                 emailsign: {
                     required: true
+                },
+                password:{
+                    required: true
+                },
+                skype:{
+                    required: true
+                },
+                skype_password:{
+                    required: true
+                },
+                gmail_id:{
+                    required: true
+                },
+                linkedIn_profile:{
+                    required: true
                 }
+
             },
 
 
