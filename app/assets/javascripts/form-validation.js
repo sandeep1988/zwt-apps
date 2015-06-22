@@ -68,8 +68,31 @@ var FormValidation = function () {
                 },
                 linkedIn_profile:{
                     required: true
+                },
+                tags:{
+                    required: true
+                },
+                referred_by:{
+                    required: true
+                },
+                select_country:{
+                    required: true
+                },
+                phone:{
+                    required: true
+                },
+                cellnumber:{
+                    required: true
+                },
+                linkedin_profile:{
+                    required: true
+                },
+                websiteurl:{
+                    required: true
+                },
+                companyname:{
+                    required: true
                 }
-
             },
 
 
