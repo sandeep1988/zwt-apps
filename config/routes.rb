@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   resources :sales
   devise_for :users
   get 'welcome/index'
-
+  get 'contacts/details'
+  # get 'contacts/:id' => 'contacts#contacts_details', as: :contacts_details
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
