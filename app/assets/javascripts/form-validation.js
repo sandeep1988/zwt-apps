@@ -92,6 +92,15 @@ var FormValidation = function () {
                 },
                 companyname:{
                     required: true
+                },
+                description:{
+                    required: true
+                },
+                referenceurls:{
+                    required: true
+                },
+                notes:{
+                    required: true
                 }
             },
 

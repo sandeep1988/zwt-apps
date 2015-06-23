@@ -52,7 +52,23 @@ var Login = function() {
                 },
                 add_inv11: {
                     required: true
+                },
+                add_inv12: {
+                    required: true
+                },
+                add_inv13: {
+                    required: true
+                },
+                add_inv14: {
+                    required: true
+                },
+                add_inv15: {
+                    required: true
+                },
+                add_inv16: {
+                    required: true
                 }
+
             },
 
             messages: {

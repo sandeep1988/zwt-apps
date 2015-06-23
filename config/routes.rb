@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
+  resources :cases
   resources :contacts
   resources :sales
-  devise_for :users
   get 'welcome/index'
+  get 'welcome/edit_user'
   get 'welcome/forget_password_developer'
   get 'contacts/details'
+  # get 'users/edit'
   # get 'contacts/:id' => 'contacts#contacts_details', as: :contacts_details
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -96,7 +96,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-default">
                                     <li>
-                                        <a href="/sales/1/edit">
+                                        <a href="/welcome/edit_user">
                                             <i class="icon-user"></i> My Account </a>
                                     </li>
                                     <li class="divider">
@@ -148,9 +148,15 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <a href="/contacts" class="tooltips" data-container="body" data-placement="bottom" data-html="true" data-original-title="Contact Detail">Contacts</a>
                             </li>
                         <% end %>
-                            <li>
-                                <a href="javascript:;" class="tooltips" data-container="body" data-placement="bottom" data-html="true" data-original-title="Cases Detail">Cases</a>
+                        <% if params[:controller] == "cases" %>
+                             <li class="active">
+                                <a href="/cases" class="tooltips" data-container="body" data-placement="bottom" data-html="true" data-original-title="Cases Detail">Cases</a>
                             </li>
+                            <% else %>
+                                <li>
+                                <a href="/cases" class="tooltips" data-container="body" data-placement="bottom" data-html="true" data-original-title="Cases Detail">Cases</a>
+                                </li>
+                                <% end %>
                         </ul>
                     </div>
                     <!-- END MEGA MENU -->
