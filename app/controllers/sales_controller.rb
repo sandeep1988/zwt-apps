@@ -67,7 +67,7 @@ class SalesController < ApplicationController
   end
 
   def table_ajax
-    @test = $_REQUEST["customActionType"])
+    #@test = $_REQUEST["customActionType"])
   #   @sEcho = params[:draw]
   #   @iDisplayStart = params[:start]
   #   @iDisplayLength = params[:length]
