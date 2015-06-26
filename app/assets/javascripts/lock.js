@@ -5,10 +5,10 @@ var Lock = function () {
         init: function () {
 
              $.backstretch([
-		        "img/media/bg/1.jpg",
-    		    "img/media/bg/2.jpg",
-    		    "img/media/bg/3.jpg",
-    		    "img/media/bg/4.jpg"
+		        "../../assets/admin/pages/media/bg/1.jpg",
+    		    "../../assets/admin/pages/media/bg/2.jpg",
+    		    "../../assets/admin/pages/media/bg/3.jpg",
+    		    "../../assets/admin/pages/media/bg/4.jpg"
 		        ], {
 		          fade: 1000,
 		          duration: 8000

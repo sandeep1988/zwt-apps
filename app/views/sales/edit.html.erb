@@ -2,25 +2,16 @@
         <div class="page-container">
             <!-- BEGIN PAGE HEAD -->
             <div class="page-head">
-                <div class="container">
+                <div class="container-fluid">
                     <!-- BEGIN PAGE TITLE -->
                     <div class="page-title">
-                        <h1>Sales <small>Find and manage sales</small></h1>
+                        <h1>Sales People<small> Find and manage sales people</small></h1>
                     </div>
                     <!-- END PAGE TITLE -->
                     <!-- BEGIN PAGE TOOLBAR -->
                     <div class="page-toolbar">
                         <!-- BEGIN THEME PANEL -->
-                        <div class="btn-group btn-theme-panel">
-                            <a href="javascript:;" class="btn dropdown-toggle"  data-hover="dropdown" data-toggle="dropdown">
-                                <i class="icon-settings"></i>
-                            </a>
-                            <ul class="dropdown-menu pull-right">
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-settings"></i>Settings </a>
-                            </ul>
-                        </div>
+                        
                     </div>
                     <!-- END PAGE TOOLBAR -->
                 </div>
@@ -28,7 +19,7 @@
             <!-- END PAGE HEAD -->
             <!-- BEGIN PAGE CONTENT -->
             <div class="page-content">
-                <div class="container">
+                <div class="container-fluid">
                     <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
                     <div class="modal fade" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -54,13 +45,13 @@
                     <!-- BEGIN PAGE BREADCRUMB -->
                     <ul class="page-breadcrumb breadcrumb">
                         <li>
-                            <a href="#">Dashboard</a><i class="fa fa-circle"></i>
+                            <a href="/dashboard">Dashboard</a><i class="fa fa-circle"></i>
                         </li>
                         <li>
-                            <a href="javascript:;">Sales</a><i class="fa fa-circle"></i>
-                        </li>
+                            <a href="/sales">Sales People</a><i class="fa fa-circle"></i>
+                        </li>                        
                         <li class="active">
-                            Test22 Smothsonian
+                            Kavish Jash
                         </li>
                     </ul>
                     <!-- END PAGE BREADCRUMB -->
@@ -74,32 +65,41 @@
                                 <div class="portlet light">
                                     <div class="portlet-title">
                                         <div class="caption">
-                                            <span class="caption-subject font-green-sharp bold uppercase">Sales Info</span>
+                                            <span class="caption-subject font-green-sharp bold uppercase">Sales Person Info</span>
                                         </div>
                                     </div>
                                     <p>
-                                        <strong><a href="#">Test22 Smothsonian</a></strong>
-                                    </p>
-                                     <p>
-                                        <strong>Phone</strong> <br>
-                                        866-123-1234
+                                        <strong>Name</strong> <br>
+                                        Kavish Jash
+                                    </p>                                   
+                                    <p>
+                                        <strong>Email</strong> <br>
+                                        <a href="mailto:testing.demo@gmail.com">kavish@zealousweb.com</a> 
                                     </p>
                                     <p>
-                                        <strong>IM (Skype)</strong> <br>
-                                         test22_zwt 
+                                        <strong>Password</strong> <br>
+                                        this@admin 
+                                    </p>
+                                    <p>
+                                        <strong>Skype</strong> <br>
+                                        kavis_zwt 
+                                    </p>
+                                    <p>
+                                        <strong>Skype Password</strong> <br>
+                                        this@admin  
+                                    </p>
+                                    <p>
+                                        <strong>Phone</strong> <br>
+                                        <a href="tel:866-123-1234">866-123-1234</a>
                                     </p>
                                     <p>
                                         <strong>Gmail ID</strong> <br>
-                                         test@gmail.com  
+                                        <a href="mailto:testing.demo@gmail.com">testing.demo@gmail.com</a>
                                     </p>
                                     <p>
                                         <strong>LinkedIn Profile</strong> <br>
-                                           www.linkedin.com/testing
-                                    </p>
-                                    <p>
-                                        <strong>Email</strong> <br>
-                                        <a href="mailto:mikeross@psl-construction.com">test@gmail.com </a>
-                                    </p>
+                                        <a href="http://www.linkedin.com/testing" target="_blank">http://www.linkedin.com/testing</a>
+                                    </p>                                    
                                 </div>
                                 <!-- END PORTLET MAIN -->
                             </div>
@@ -112,73 +112,90 @@
                                             <div class="portlet-title tabbable-line">
                                                 <div class="caption caption-md">
                                                     <i class="icon-globe theme-font hide"></i>
-                                                    <span class="caption-subject font-blue-madison bold uppercase">Edit Sales</span>
+                                                    <span class="caption-subject font-blue-madison bold uppercase">Edit Sales Person</span>
                                                 </div>
                                                 
                                             </div>
                                             <div class="portlet-body">
                                                 <!-- PERSONAL INFO TAB -->
-                                                <form role="form" id="form_sample_3" method="post" action="javascript:;">
+                                                <form role="form" id="form_sample_3" class="horizontal-form" method="post" action="javascript:;">
                                                     <div class="alert alert-success display-hide">
                                                         <button class="close" data-close="alert"></button>
-                                                        Your personal information are successfully updated! 
+                                                        Sales person information are successfully updated! 
                                                     </div>
                                                     <div class="alert alert-danger display-hide">
                                                         <button class="close" data-close="alert"></button>
                                                         You have some form errors. Please check below.
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label">First Name</label>
-                                                        <input type="text" value="Test22" placeholder="Your first name" class="form-control"  name="username" aria-required="true" aria-describedby="username-error" aria-invalid="true"/>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label class="control-label">First Name <span class="required">*</span></label>
+                                                                <input type="text" value="Kavish" name="firstname" placeholder="Your first name" class="form-control"/>
+                                                            </div>
+                                                        </div>                                                    
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label class="control-label">Last Name <span class="required">*</span></label>
+                                                                <input type="text" value="Jash" name="lastname" placeholder="Your last name" class="form-control"/>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label">Last Name</label>
-                                                        <input type="text" value="Smothsonian" name="lastname" placeholder="Your last name" class="form-control"/>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label class="control-label">Email <span class="required">*</span></label>
+                                                                <input type="text" name="email" placeholder="Your email id" value="kavish@zealousweb.com" class="form-control"/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label class="control-label">Password <span class="required">*</span></label>
+                                                                <input type="password" name="password" placeholder="Your password" value="this@admin" class="form-control"/>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label">Email</label>
-                                                        <input type="text" name="email" placeholder="Your email id" value="test22@gmail.com" class="form-control"/>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label class="control-label">Skype Id <span class="required">*</span></label>
+                                                                <input type="text" name="skype" placeholder="Your Skype Id" value="kavis_zwt " class="form-control"/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label class="control-label">Skype Password <span class="required">*</span></label>
+                                                                <input type="password" name="skype_password" placeholder="Your Skype Password" value="this@admin" class="form-control"/>
+                                                            </div>
+                                                        </div>
                                                     </div>
-
-                                                    <div class="form-group">
-                                                        <label class="control-label">Password</label>
-                                                        <input type="password" name="password" placeholder="Your password" value="12345678" class="form-control"/>
+                                                    <div class="row">
+                                                        <div class="col-md-6">        
+                                                            <div class="form-group">
+                                                                <label class="control-label">Phone <span class="required">*</span></label>
+                                                                <input type="text" class="form-control" name="ei" placeholder="Your Phone Number" value="866-123-1234"/>
+                                                            </div>                                                            
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label class="control-label">Gmail ID  </label>
+                                                                <input type="text" name="gmail_id" placeholder="Your Gmail ID " value="testing.demo@gmail.com" class="form-control"/>
+                                                            </div>
+                                                        </div>                                                        
                                                     </div>
-
-                                                    <div class="form-group">
-                                                        <label class="control-label">IM (Skype) </label>
-                                                        <input type="text" name="skype" placeholder="Your IM (Skype) " value=" test22_zwt " class="form-control"/>
-                                                    </div>
-
-                                                    <div class="form-group">
-                                                        <label class="control-label">IM Password </label>
-                                                        <input type="password" name="skype_password" placeholder="Your IM Password" value=" 12345678 " class="form-control"/>
-                                                    </div>
-
-
-                                                    <div class="form-group">
-                                                        <label class="control-label">Gmail ID  </label>
-                                                        <input type="text" name="gmail_id" placeholder="Your Gmail ID " value=" test@gmail.com " class="form-control"/>
-                                                    </div>
-
-                                                    <div class="form-group">
-                                                        <label class="control-label">LinkedIn Profile</label>
-                                                        <input type="text" name="linkedIn_profile" placeholder="Your LinkedIn Profile" value=" www.linkedin.com/testing " class="form-control"/>
-                                                    </div>
-
-
-                                                    <div class="form-group">
-                                                        <label class="control-label"> Phone</label>
-                                                        <input type="text" class="form-control" name="ei" placeholder="" value="866-123-1234"/>
-                                                    </div>
-
-
                                                     
-                                                    <div class="margiv-top-10">
-                                                        <a href="#" id="submit-personal-info-form" class="btn green-haze">
-                                                            Save Changes </a>
+                                                    <div class="row">
+                                                        <div class="col-md-12">        
+                                                            <div class="form-group">
+                                                                <label class="control-label">LinkedIn Profile</label>
+                                                                <input type="text" name="linkedIn_profile" placeholder="Your LinkedIn Profile" value="http://www.linkedin.com/testing" class="form-control"/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="left">
+                                                        <a href="#" id="submit-personal-info-form" class="btn green-haze">Save Changes </a>
                                                         <input type="submit" class="btn default" value="Validate">
-                                                        <a href="#" class="btn default">Cancel </a>
+                                                        <a href="/sales" class="btn default">Cancel </a>
                                                     </div>
                                                 </form>
                                             </div>

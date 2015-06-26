@@ -4,22 +4,13 @@
                 <div class="container">
                     <!-- BEGIN PAGE TITLE -->
                     <div class="page-title">
-                        <h1>Sales <small>Find a Sales</small></h1>
+                        <h1>Sales Person <small>Find a Sales Person</small></h1>
                     </div>
                     <!-- END PAGE TITLE -->
                     <!-- BEGIN PAGE TOOLBAR -->
                     <div class="page-toolbar">
                         <!-- BEGIN THEME PANEL -->
-                        <div class="btn-group btn-theme-panel">
-                            <a href="javascript:;" class="btn dropdown-toggle"  data-hover="dropdown" data-toggle="dropdown">
-                                <i class="icon-settings"></i>
-                            </a>
-                            <ul class="dropdown-menu pull-right">
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-settings"></i>Settings </a>
-                            </ul>
-                        </div>
+                        
                     </div>
                     <!-- END PAGE TOOLBAR -->
                 </div>
@@ -52,12 +43,7 @@
                     <!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
                     <!-- BEGIN PAGE BREADCRUMB -->
                     <ul class="page-breadcrumb breadcrumb">
-                        <li>
-                            <a href="#">Dashboard</a><i class="fa fa-circle"></i>
-                        </li>
-                        <li class="test@gmail.com">
-                            Sales
-                        </li>
+                        
                     </ul>
                     <!-- END PAGE BREADCRUMB -->
                     <!-- BEGIN PAGE CONTENT INNER -->
@@ -68,7 +54,7 @@
                                 <div class="portlet light">
                                     <div class="portlet-title">
                                         <div class="caption" data-toggle="collapse" data-target=".todo-project-list-content">
-                                            <span class="caption-subject font-green-sharp bold uppercase">Sales </span>
+                                            <span class="caption-subject font-green-sharp bold uppercase">Sales Person</span>
                                         </div>
                                         <div class="actions">
                                             <div class="btn-group">
@@ -78,7 +64,7 @@
                                                 <ul class="dropdown-menu pull-right">
                                                     <li>
                                                         <a href="/sales/new">
-                                                            <i class="i"></i> Add a sales </a>
+                                                            <i class="i"></i> Add a sales person</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -87,36 +73,25 @@
                                     <form action="javascript:void(0)" method="post" id="form_sample_5">
                                         <div class="form-group margin-top-20">
                                             <div class="col">
-                                                <select class="form-control select2me" name="current_stage">
-                                                    <option value="">Select Current Stage</option>
-                                                    <option value="Discovery">Discovery Stage</option>
-                                                    <option value="Due Diligence">Due Diligence Stage</option>
-                                                    <option value="Acquisition">Acquisition Stage</option>
-                                                    <option value="Construction">Construction Stage</option>
-                                                </select>
+                                            <input class="form-control" type="text" placeholder="Search First Name" name="first_name_filter">
                                             </div>
                                         </div>
                                         <div class="form-group margin-top-20">
                                             <div class="col">
-                                                <select class="form-control select2me" name="current_status">
-                                                    <option value="">Select Current Status</option>
-                                                    <option value="test@gmail.com">test@gmail.com</option>
-                                                    <option value="test@gmail.com">test@gmail.com</option>
-                                                    <option value="On Hold">test@gmail.com</option>
-                                                    <option value="test@gmail.com">test@gmail.com</option>
-                                                </select>
+                                                <input class="form-control" placeholder="Search Last Name" type="text" name="last_name_filter">
                                             </div>
                                         </div>
                                         <div class="form-group margin-top-20">
                                             <div class="col">
-                                                <select class="form-control select2me" name="rel_manager">
-                                                    <option value="">Select Relationship Sales</option>
-                                                    <option value="<a href="employee_detail_account.html">Lauren R. Moon</a>"><a href="employee_detail_account.html">Lauren R. Moon</a></option>
-                                                    <option value="<a href="employee_detail_account.html">Susan J. Pippin</a>"><a href="employee_detail_account.html">Susan J. Pippin</a></option>
-                                                    <option value="<a href="employee_detail_account.html">Edit/destroy</a>"><a href="employee_detail_account.html">Edit/destroy</a></option>
-                                                </select>
+                                                <input class="form-control" placeholder="Search Email" type="text" name="email_filter">
                                             </div>
                                         </div>
+                                        <div class="form-group margin-top-20">
+                                            <div class="col">
+                                                <input class="form-control" placeholder="Search Phone Number" type="text" name="phone_filter">
+                                            </div>
+                                        </div>
+
                                         <div class="margin-top-10 text-right">
                                             <a href="#" class="btn red">Clear </a>
                                             <input type="submit" class="btn green" value="Go">
@@ -130,7 +105,7 @@
                                 <div class="portlet light">
                                     <div class="portlet-title no-border margin-bottom-0 col-md-4">
                                         <div class="caption">
-                                            <span class="caption-subject font-green-sharp bold uppercase">Showing: All Sales</span>
+                                            <span class="caption-subject font-green-sharp bold uppercase">Showing: All Sales Person</span>
                                         </div>                               
                                     </div>
                                     <div class="portlet-body">
@@ -155,24 +130,26 @@
                                             <tbody>
                                                 <tr>
                                                     
-                                                    <td><a href="javascript:void(0);">Test1</a></td>
+                                                    <td>Test1</td>
                                                     <td>
-                                                         <a href="javascript:void(0);">Joshua L. Pickett</a>
+                                                         Joshua L. Pickett
                                                     </td>
                                                     <td>test@gmail.com</td> 
                                                     <td>
                                                          866-123-1234
                                                     </td>
 
-                                                    <td><a href="//sales/1/edit">Edit</a> | <a href="#">Delete</a></td>
+                                                    <td>
+                                                    <a href="/sales/1/edit" class="btn green">Edit</a> 
+                                                    <a href="#" class="btn red">Delete </a>
                                                 </tr>
                                                 <tr>
                                                     
                                                     <td>
-                                                        <a href="javascript:void(0);">Test2</a>
+                                                        Test2
                                                     </td>
                                                     <td>
-                                                        <a href="javascript:void(0);">
+                                                        
                                                             Harold H. Felix
                                                         </a>
                                                     </td>
@@ -182,16 +159,17 @@
                                                          866-123-1234
                                                     </td>
                                                     <td>
-                                                        <a href="/sales/1/edit">Edit</a> | <a href="#">Delete</a>
+                                                        <a href="/sales/1/edit" class="btn green">Edit</a> 
+                                                    <a href="#" class="btn red">Delete </a>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     
                                                     <td>
-                                                        <a href="javascript:void(0);">Test3</a>
+                                                        Test3</a>
                                                     </td>
                                                     <td>
-                                                        <a href="javascript:void(0);">
+                                                        
                                                             Margie J. Reid
                                                         </a>
                                                     </td>
@@ -201,13 +179,14 @@
                                                          866-123-1234
                                                     </td>
 
-                                                    <td><a href="/sales/1/edit">Edit</a> | <a href="#">Delete</a></td>
+                                                    <td><a href="/sales/1/edit" class="btn green">Edit</a> 
+                                                    <a href="#" class="btn red">Delete </a></td>
                                                 </tr>
                                                 <tr>
                                                     
-                                                    <td><a href="javascript:void(0);">Test4</a></td>
+                                                    <td>Test4</a></td>
                                                     <td>
-                                                        <a href="javascript:void(0);">
+                                                        
                                                             Ben T. West
                                                         </a>
                                                     </td>
@@ -216,13 +195,14 @@
                                                     <td>
                                                          866-123-1234
                                                     </td>
-                                                    <td><a href="/sales/1/edit">Edit</a> | <a href="#">Delete</a></td>
+                                                    <td><a href="/sales/1/edit" class="btn green">Edit</a> 
+                                                    <a href="#" class="btn red">Delete </a></td>
                                                 </tr>
                                                 <tr>
                                                     
-                                                    <td><a href="javascript:void(0);">Test5</a></td>
+                                                    <td>Test5</a></td>
                                                     <td>
-                                                        <a href="javascript:void(0);">
+                                                        
                                                             Amber H. Duncan
                                                         </a>
                                                     </td>
@@ -231,13 +211,14 @@
                                                     <td>
                                                          866-123-1234
                                                     </td>
-                                                    <td><a href="/sales/1/edit">Edit</a> | <a href="#">Delete</a></td>
+                                                    <td><a href="/sales/1/edit" class="btn green">Edit</a> 
+                                                    <a href="#" class="btn red">Delete </a></td>
                                                 </tr>
                                                 <tr>
                                                    
-                                                    <td><a href="javascript:void(0);">Test6</a></td>
+                                                    <td>Test6</a></td>
                                                     <td>
-                                                        <a href="javascript:void(0);">
+                                                        
                                                             Susan J. Giddings
                                                         </a>
                                                     </td>
@@ -246,13 +227,14 @@
                                                     <td>
                                                          866-123-1234
                                                     </td>
-                                                    <td><a href="/sales/1/edit">Edit</a> | <a href="#">Delete</a></td>
+                                                    <td><a href="/sales/1/edit" class="btn green">Edit</a> 
+                                                    <a href="#" class="btn red">Delete </a></td>
                                                 </tr>
                                                 <tr>
                                                     
-                                                    <td><a href="javascript:void(0);">Test7</a> </td>
+                                                    <td>Test7</a> </td>
                                                     <td>
-                                                        <a href="javascript:void(0);">
+                                                        
                                                             Benjamin E. Derose
                                                         </a>
                                                     </td>
@@ -261,13 +243,14 @@
                                                     <td>
                                                          866-123-1234
                                                     </td>
-                                                    <td><a href="/sales/1/edit">Edit</a> | <a href="#">Delete</a></td>
+                                                    <td><a href="/sales/1/edit" class="btn green">Edit</a> 
+                                                    <a href="#" class="btn red">Delete </a></td>
                                                 </tr>
                                                 <tr>
                                                     
-                                                    <td><a href="javascript:void(0);">Test8</a> </td>
+                                                    <td>Test8</a> </td>
                                                     <td>
-                                                        <a href="javascript:void(0);">
+                                                        
                                                             Leonor A. Smith
                                                         </a>
                                                     </td>
@@ -276,13 +259,14 @@
                                                     <td>
                                                          866-123-1234
                                                     </td>
-                                                    <td><a href="/sales/1/edit">Edit</a> | <a href="#">Delete</a></td>
+                                                    <td><a href="/sales/1/edit" class="btn green">Edit</a> 
+                                                    <a href="#" class="btn red">Delete </a></td>
                                                 </tr>
                                                 <tr>
                                                     
-                                                    <td><a href="javascript:void(0);">Test9</a></td>
+                                                    <td>Test9</a></td>
                                                     <td>
-                                                        <a href="javascript:void(0);">
+                                                        
                                                             Robert L. Purpura
                                                         </a>
                                                     </td>
@@ -291,13 +275,14 @@
                                                     <td>
                                                          866-123-1234
                                                     </td>
-                                                    <td><a href="/sales/1/edit">Edit</a> | <a href="#">Delete</a></td>
+                                                    <td><a href="/sales/1/edit" class="btn green">Edit</a> 
+                                                    <a href="#" class="btn red">Delete </a></td>
                                                 </tr>
                                                 <tr>
                                                     
-                                                    <td><a href="javascript:void(0);">Test10</a></td>
+                                                    <td>Test10</a></td>
                                                     <td>
-                                                        <a href="javascript:void(0);">
+                                                        
                                                             Darryl P. Goss
                                                         </a>
                                                     </td>
@@ -306,13 +291,14 @@
                                                     <td>
                                                          866-123-1234
                                                     </td>
-                                                    <td><a href="/sales/1/edit">Edit</a> | <a href="#">Delete</a></td>
+                                                    <td><a href="/sales/1/edit" class="btn green">Edit</a> 
+                                                    <a href="#" class="btn red">Delete </a></td>
                                                 </tr>
                                                 <tr>
                                                    
-                                                    <td><a href="javascript:void(0);">Test11 </a></td>
+                                                    <td>Test11 </a></td>
                                                     <td>
-                                                        <a href="javascript:void(0);">
+                                                        
                                                             Brenda F. Pearson
                                                         </a>
                                                     </td>
@@ -321,13 +307,14 @@
                                                     <td>
                                                          866-123-1234
                                                     </td>
-                                                    <td><a href="/sales/1/edit">Edit</a> | <a href="#">Delete</a></td>
+                                                    <td><a href="/sales/1/edit" class="btn green">Edit</a> 
+                                                    <a href="#" class="btn red">Delete </a></td>
                                                 </tr>
                                                 <tr>
                                                     
-                                                    <td><a href="javascript:void(0);">Test12 </a></td>
+                                                    <td>Test12 </a></td>
                                                     <td>
-                                                        <a href="javascript:void(0);">
+                                                        
                                                             Peter N. Corson
                                                         </a>
                                                     </td>
@@ -336,13 +323,14 @@
                                                     <td>
                                                          866-123-1234
                                                     </td>
-                                                    <td><a href="/sales/1/edit">Edit</a> | <a href="#">Delete</a></td>
+                                                    <td><a href="/sales/1/edit" class="btn green">Edit</a> 
+                                                    <a href="#" class="btn red">Delete </a></td>
                                                 </tr>
                                                 <tr>
                                                     
-                                                    <td><a href="javascript:void(0);">Test13 </a></td>
+                                                    <td>Test13 </a></td>
                                                     <td>
-                                                        <a href="javascript:void(0);">
+                                                        
                                                             Elsie N. Couch
                                                         </a>
                                                     </td>
@@ -351,13 +339,14 @@
                                                     <td>
                                                          866-123-1234
                                                     </td>
-                                                    <td><a href="/sales/1/edit">Edit</a> | <a href="#">Delete</a></td>
+                                                    <td><a href="/sales/1/edit" class="btn green">Edit</a> 
+                                                    <a href="#" class="btn red">Delete </a></td>
                                                 </tr>
                                                 <tr>
                                                     
-                                                    <td><a href="javascript:void(0);">Test14</a></td>
+                                                    <td>Test14</a></td>
                                                     <td>
-                                                        <a href="javascript:void(0);">
+                                                        
                                                             Wesley G. Sullivan
                                                         </a>
                                                     </td>
@@ -366,13 +355,14 @@
                                                     <td>
                                                          866-123-1234
                                                     </td>
-                                                    <td><a href="/sales/1/edit">Edit</a> | <a href="#">Delete</a></td>
+                                                    <td><a href="/sales/1/edit" class="btn green">Edit</a> 
+                                                    <a href="#" class="btn red">Delete </a></td>
                                                 </tr>
                                                 <tr>
                                                     
-                                                    <td><a href="javascript:void(0);">Test15</a></td>
+                                                    <td>Test15</a></td>
                                                     <td>
-                                                        <a href="javascript:void(0);">
+                                                        
                                                             Yvonne P. Schaefer
                                                         </a>
                                                     </td>
@@ -381,13 +371,14 @@
                                                     <td>
                                                          866-123-1234
                                                     </td>
-                                                    <td><a href="/sales/1/edit">Edit</a> | <a href="#">Delete</a></td>
+                                                    <td><a href="/sales/1/edit" class="btn green">Edit</a> 
+                                                    <a href="#" class="btn red">Delete </a></td>
                                                 </tr>
                                                 <tr>
                                                     
-                                                    <td><a href="javascript:void(0);">Test16</a> </td>
+                                                    <td>Test16</a> </td>
                                                     <td>
-                                                        <a href="javascript:void(0);">
+                                                        
                                                             Clifton A. Hurtt
                                                         </a>
                                                     </td>
@@ -396,13 +387,14 @@
                                                     <td>
                                                          866-123-1234
                                                     </td>
-                                                    <td><a href="/sales/1/edit">Edit</a> | <a href="#">Delete</a></td>
+                                                    <td><a href="/sales/1/edit" class="btn green">Edit</a> 
+                                                    <a href="#" class="btn red">Delete </a></td>
                                                 </tr>
                                                 <tr>
                                                     
-                                                    <td><a href="javascript:void(0);">Test17</a></td>
+                                                    <td>Test17</a></td>
                                                     <td>
-                                                        <a href="javascript:void(0);">
+                                                        
                                                             Thelma J. Raines
                                                         </a>
                                                     </td>
@@ -411,13 +403,14 @@
                                                     <td>
                                                          866-123-1234
                                                     </td>
-                                                    <td><a href="/sales/1/edit">Edit</a> | <a href="#">Delete</a></td>
+                                                    <td><a href="/sales/1/edit" class="btn green">Edit</a> 
+                                                    <a href="#" class="btn red">Delete </a></td>
                                                 </tr>
                                                 <tr>
                                                     
-                                                    <td><a href="javascript:void(0);">Test18</a></td>
+                                                    <td>Test18</a></td>
                                                     <td>
-                                                        <a href="javascript:void(0);">
+                                                        
                                                             Maribel D. Ferguson 
                                                         </a>
                                                     </td>
@@ -426,13 +419,14 @@
                                                     <td>
                                                          866-123-1234
                                                     </td>
-                                                    <td><a href="/sales/1/edit">Edit</a> | <a href="#">Delete</a></td>
+                                                    <td><a href="/sales/1/edit" class="btn green">Edit</a> 
+                                                    <a href="#" class="btn red">Delete </a></td>
                                                 </tr>
                                                 <tr>
                                                    
-                                                    <td><a href="javascript:void(0);">Test19</a></td>
+                                                    <td>Test19</a></td>
                                                     <td>
-                                                        <a href="javascript:void(0);">
+                                                        
                                                             Miriam M. Troy
                                                         </a>
                                                     </td>
@@ -441,13 +435,14 @@
                                                     <td>
                                                          866-123-1234
                                                     </td>
-                                                    <td><a href="/sales/1/edit">Edit</a> | <a href="#">Delete</a></td>
+                                                    <td><a href="/sales/1/edit" class="btn green">Edit</a> 
+                                                    <a href="#" class="btn red">Delete </a></td>
                                                 </tr>
                                                 <tr>
                                                     
-                                                    <td><a href="javascript:void(0);">Test20</a></td>
+                                                    <td>Test20</a></td>
                                                     <td>
-                                                        <a href="javascript:void(0);">
+                                                        
                                                             Lola H. Solomon
                                                         </a>
                                                     </td>
@@ -456,13 +451,14 @@
                                                     <td>
                                                          866-123-1234
                                                     </td>
-                                                    <td><a href="/sales/1/edit">Edit</a> | <a href="#">Delete</a></td>
+                                                    <td><a href="/sales/1/edit" class="btn green">Edit</a> 
+                                                    <a href="#" class="btn red">Delete </a></td>
                                                 </tr>
                                                 <tr>
                                                     
-                                                    <td><a href="javascript:void(0);">Test21 </a></td>
+                                                    <td>Test21 </a></td>
                                                     <td>
-                                                        <a href="javascript:void(0);">
+                                                        
                                                             Charles M. Brown
                                                         </a>
                                                     </td>
@@ -471,17 +467,18 @@
                                                     <td>
                                                          866-123-1234
                                                     </td>
-                                                    <td><a href="/sales/1/edit">Edit</a> | <a href="#">Delete</a></td>
+                                                    <td><a href="/sales/1/edit" class="btn green">Edit</a> 
+                                                    <a href="#" class="btn red">Delete </a></td>
                                                 </tr>
                                                 <tr>
                                                     
                                                     <td>
-                                                        <a href="javascript:void(0);">
+                                                        
                                                             Test22
                                                         </a>
                                                     </td>
                                                     <td>
-                                                        <a href="javascript:void(0);">
+                                                        
                                                             Marco M. Nelson
                                                         </a>
                                                     </td>
@@ -490,13 +487,14 @@
                                                     <td>
                                                          866-123-1234
                                                     </td>
-                                                    <td><a href="/sales/1/edit">Edit</a> | <a href="#">Delete</a></td>
+                                                    <td><a href="/sales/1/edit" class="btn green">Edit</a> 
+                                                    <a href="#" class="btn red">Delete </a></td>
                                                 </tr>
                                                 <tr>
                                                    
-                                                    <td><a href="javascript:void(0);">Test23</a></td>
+                                                    <td>Test23</a></td>
                                                     <td>
-                                                        <a href="javascript:void(0);">
+                                                        
                                                             Thelma J. Raines
                                                         </a>
                                                     </td>
@@ -505,13 +503,14 @@
                                                     <td>
                                                          866-123-1234
                                                     </td>
-                                                    <td><a href="/sales/1/edit">Edit</a> | <a href="#">Delete</a></td>
+                                                    <td><a href="/sales/1/edit" class="btn green">Edit</a> 
+                                                    <a href="#" class="btn red">Delete </a></td>
                                                 </tr>
                                                 <tr>
                                                     
-                                                    <td><a href="javascript:void(0);">Test24</a></td>
+                                                    <td>Test24</a></td>
                                                     <td>
-                                                        <a href="javascript:void(0);">
+                                                        
                                                             Elaine R. Kopecky
                                                         </a>
                                                     </td>
@@ -520,13 +519,14 @@
                                                     <td>
                                                          866-123-1234
                                                     </td>
-                                                    <td><a href="/sales/1/edit">Edit</a> | <a href="#">Delete</a></td>
+                                                    <td><a href="/sales/1/edit" class="btn green">Edit</a> 
+                                                    <a href="#" class="btn red">Delete </a></td>
                                                 </tr>
                                                 <tr>
                                                     
-                                                    <td><a href="javascript:void(0);">Test25</a></td>
+                                                    <td>Test25</a></td>
                                                     <td>
-                                                        <a href="javascript:void(0);">
+                                                        
                                                             Anthony K. Davis
                                                         </a>
                                                     </td>
@@ -535,7 +535,8 @@
                                                     <td>
                                                          866-123-1234
                                                     </td>
-                                                    <td><a href="/sales/1/edit">Edit</a> | <a href="#">Delete</a></td>
+                                                    <td><a href="/sales/1/edit" class="btn green">Edit</a> 
+                                                    <a href="#" class="btn red">Delete </a></td>
                                                 </tr>
                                                 
                                             </tbody>

@@ -1,11 +1,20 @@
 Rails.application.routes.draw do
+  get 'tag/index'
+
+  resources :followuptypes
   resources :cases
   resources :contacts
   resources :sales
   get 'welcome/index'
   get 'welcome/edit_user'
+  # match'/my_profile' => 'sales#my_profile', :as => 'my_profile'
+  get '/my_profile', to: 'sales#my_profile'
+  get '/dashboard', to: 'sales#dashboard'
   get 'welcome/forget_password_developer'
   get 'contacts/details'
+  get 'cases/details'
+  get 'tag/index'
+  post 'sales/table_ajax'
   # get 'users/edit'
   # get 'contacts/:id' => 'contacts#contacts_details', as: :contacts_details
   # The priority is based upon order of creation: first created -> highest priority.
@@ -13,7 +22,6 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
-
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

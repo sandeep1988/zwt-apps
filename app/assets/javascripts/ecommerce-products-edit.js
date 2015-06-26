@@ -9,7 +9,7 @@ var EcommerceProductsEdit = function () {
             browse_button : document.getElementById('tab_images_uploader_pickfiles'), // you can pass in id...
             container: document.getElementById('tab_images_uploader_container'), // ... or DOM Element itself
              
-            url : "../plugins/plupload/examples/upload.php",
+            url : "assets/plugins/plupload/examples/upload.php",
              
             filters : {
                 max_file_size : '10mb',
@@ -20,10 +20,10 @@ var EcommerceProductsEdit = function () {
             },
          
             // Flash settings
-            flash_swf_url : '../plugins/plupload/js/Moxie.swf',
+            flash_swf_url : 'assets/plugins/plupload/js/Moxie.swf',
      
             // Silverlight settings
-            silverlight_xap_url : '../plugins/plupload/js/Moxie.xap',             
+            silverlight_xap_url : 'assets/plugins/plupload/js/Moxie.xap',             
          
             init: {
                 PostInit: function() {
@@ -89,7 +89,7 @@ var EcommerceProductsEdit = function () {
             dataTable: { // here you can define a typical datatable settings from http://datatables.net/usage/options 
 
                 // Uncomment below line("dom" parameter) to fix the dropdown overflow issue in the datatable cells. The default datatable layout
-                // setup uses scrollable div(table-scrollable) with overflow:auto to enable vertical scroll(see: scripts/datatable.js). 
+                // setup uses scrollable div(table-scrollable) with overflow:auto to enable vertical scroll(see: assets/global/scripts/datatable.js). 
                 // So when dropdowns used the scrollable div should be removed. 
                 //"dom": "<'row'<'col-md-8 col-sm-12'pli><'col-md-4 col-sm-12'<'table-group-actions pull-right'>>r>t<'row'<'col-md-8 col-sm-12'pli><'col-md-4 col-sm-12'>>",
 

@@ -25,7 +25,6 @@ class SalesController < ApplicationController
   # POST /sales.json
   def create
     @sale = Sale.new(sale_params)
-
     respond_to do |format|
       if @sale.save
         format.html { redirect_to @sale, notice: 'Sale was successfully created.' }
@@ -60,7 +59,39 @@ class SalesController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def my_profile
+  end
+  
+  def dashboard
+  end
 
+  def table_ajax
+    @test = $_REQUEST["customActionType"])
+  #   @sEcho = params[:draw]
+  #   @iDisplayStart = params[:start]
+  #   @iDisplayLength = params[:length]
+  #   @iTotalRecords = 178;
+
+  #   if @iDisplayLength < 0
+  #       @iDisplayLength = @iTotalRecords
+  #   end
+
+  #    @records = []
+  #   @records["data"] = [] 
+
+  # @end = @iDisplayStart + @iDisplayLength
+
+  #   if @end > @iTotalRecords
+  #      @end = @iTotalRecords
+  #   end
+
+  # @status_list = []
+  # @status_list("success" => "Pending")
+  # @status_list("info" => "Closed"),
+  # @status_list("danger" => "On Hold")
+  # @status_list("warning" => "Fraud")
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_sale
@@ -69,6 +100,6 @@ class SalesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sale_params
-      params.require(:sale).permit(:first_name, :last_name, :email, :phone)
+      params.require(:sale).permit(:username, :password)
     end
 end

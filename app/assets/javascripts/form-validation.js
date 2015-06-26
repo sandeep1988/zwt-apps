@@ -14,13 +14,7 @@ var FormValidation = function () {
         var form3 = $('#form_sample_3');
         var error3 = $('.alert-danger', form3);
         var success3 = $('.alert-success', form3);
-        
-        $("#submit-personal-info-form").click(function(){
-            $(".form-group").removeClass('has-error');
-            $(".form-group").find(".help-block-error").hide();
-            success3.show();
-            error3.hide();
-        });
+
         //IMPORTANT: update CKEDITOR textarea with actual content before submit
         /*form3.on('submit', function() {
                 for(var instanceName in CKEDITOR.instances) {
@@ -55,7 +49,7 @@ var FormValidation = function () {
                     required: true
                 },
                 password:{
-                    required: true
+                   required: true
                 },
                 skype:{
                     required: true
@@ -64,10 +58,10 @@ var FormValidation = function () {
                     required: true
                 },
                 gmail_id:{
-                    required: true
+                   required: true
                 },
                 linkedIn_profile:{
-                    required: true
+                   required: true
                 },
                 tags:{
                     required: true
@@ -82,24 +76,33 @@ var FormValidation = function () {
                     required: true
                 },
                 cellnumber:{
-                    required: true
+                   required: true
                 },
                 linkedin_profile:{
-                    required: true
-                },
+                   required: true
+                },               
                 websiteurl:{
-                    required: true
+                   required: true
                 },
                 companyname:{
-                    required: true
+                   required: true
                 },
                 description:{
-                    required: true
+                   required: true
                 },
                 referenceurls:{
-                    required: true
+                   required: true
                 },
                 notes:{
+                   required: true
+                },
+                followed_up_by:{
+                   required: true
+                },
+                next_follow_up_By:{
+                    required: true
+                },
+                outcome:{
                     required: true
                 }
             },
@@ -160,14 +163,7 @@ var FormValidation = function () {
         var form4 = $('#form_sample_4');
         var error4 = $('.alert-danger', form4);
         var success4 = $('.alert-success', form4);
-        
-        $("#submit-change-password-form").click(function(){
-            $(".form-group").removeClass('has-error');
-            $(".form-group").find(".help-block-error").hide();
-            success4.show();
-            error4.hide();
-        });
-        
+
         //IMPORTANT: update CKEDITOR textarea with actual content before submit
         /*form4.on('submit', function() {
                 for(var instanceName in CKEDITOR.instances) {
@@ -248,14 +244,7 @@ var FormValidation = function () {
         var form5 = $('#form_sample_5');
         var error5 = $('.alert-danger', form5);
         var success5 = $('.alert-success', form5);
-        
-        $("#submit-security-questions-form").click(function(){
-            $(".form-group").removeClass('has-error');
-            $(".form-group").find(".help-block-error").hide();
-            success5.show();
-            error5.hide();
-        });
-        
+
         //IMPORTANT: update CKEDITOR textarea with actual content before submit
         /*form5.on('submit', function() {
                 for(var instanceName in CKEDITOR.instances) {
@@ -344,14 +333,7 @@ var FormValidation = function () {
         var form6 = $('#form_sample_6');
         var error6 = $('.alert-danger', form6);
         var success6 = $('.alert-success', form6);
-        
-        $("#submit-permission-form").click(function(){
-            $(".form-group").removeClass('has-error');
-            $(".form-group").find(".help-block-error").hide();
-            success6.show();
-            error6.hide();
-        });
-        
+
         //IMPORTANT: update CKEDITOR textarea with actual content before submit
         /*form6.on('submit', function() {
                 for(var instanceName in CKEDITOR.instances) {

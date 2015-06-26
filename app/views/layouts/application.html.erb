@@ -26,25 +26,33 @@ License: You must have a valid license purchased only from themeforest(the above
         <meta content="" name="author"/>
     <%#= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%#= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
+    <%#= csrf_meta_tags %>
         <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css">
-
+    <link href="/assets/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css">
+     <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+     <link href="/assets/uniform/css/uniform.default.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" type="text/css" href="/assets/select2/select2.css"/>
         <link rel="stylesheet" type="text/css" href="/assets/todo.css"/>
 
-        <link href="/assets/font-awesome.min.css" rel="stylesheet" type="text/css"> 
+         
         <link rel="stylesheet" type="text/css" href="/assets/datatables/plugins/bootstrap/dataTables.bootstrap.css"/>
+        <link rel="stylesheet" type="text/css" href="/assets/datepicker.css"/>
+        <link rel="stylesheet" type="text/css" href="/assets/jquery.tagsinput.css"/>
 
-        <link href="/assets/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css">
-        <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-        <link href="/assets/uniform/css/uniform.default.css" rel="stylesheet" type="text/css">
+        
+        
         <!-- END GLOBAL MANDATORY STYLES -->
         <!-- BEGIN PAGE LEVEL STYLES -->
         <link href="/assets/bootstrap-fileinput/bootstrap-fileinput.css" rel="stylesheet" type="text/css"/>
         <link href="/assets/profile.css" rel="stylesheet" type="text/css"/>
         <link href="/assets/tasks.css" rel="stylesheet" type="text/css"/>
         <!-- END PAGE LEVEL STYLES -->
+         <link href="/assets/colorpicker.css" rel="stylesheet" type="text/css"/>
+         
+         <link href="/assets/font-awesome.css" rel="stylesheet" type="text/css">
+         <link href="/assets/font-awesome.min.css" rel="stylesheet" type="text/css">
         <!-- BEGIN THEME STYLES -->
         <link href="/assets/components-rounded.css" id="style_components" rel="stylesheet" type="text/css">
         <link href="/assets/plugins.css" rel="stylesheet" type="text/css">
@@ -65,7 +73,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <div class="page-header">
             <!-- BEGIN HEADER TOP -->
             <div class="page-header-top">
-                <div class="container">
+                <div class="container-fluid">
                     <!-- BEGIN LOGO -->
                     <div class="page-logo">
                         <a href="javascript:void(0);"><img src="/assets/logo_zwt.png" alt="logo" class="logo-default"></a>
@@ -92,18 +100,20 @@ License: You must have a valid license purchased only from themeforest(the above
                             <li class="dropdown dropdown-user dropdown-dark">
                                 <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                                     <img alt="" class="img-circle" src="/assets/avatar9.jpg">
-                                    <span class="username username-hide-mobile">Nick</span>
+                                    <span class="username username-hide-mobile">Kavis Jash</span>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-default">
-                                    <li>
-                                        <a href="/welcome/edit_user">
-                                            <i class="icon-user"></i> My Account </a>
-                                    </li>
-                                    <li class="divider">
+                                <li>
+                                        <a href="/my_profile">
+                                            <i class="icon-user-following"></i> My Account </a>
                                     </li>
                                     <li>
-                                        <a href="javascript:void(0);">
-                                            <i class="icon-lock"></i> Lock Screen </a>
+                                        <a href="/followuptypes">
+                                            <i class="icon-settings"></i>  Follow Up Types</a>
+                                    </li>
+                                    <li>
+                                        <a href="/tag/index">
+                                            <i class="icon-list"></i> List of all tags</a>
                                     </li>
                                     <li>
                                         <a href="/">
@@ -120,25 +130,15 @@ License: You must have a valid license purchased only from themeforest(the above
             <!-- END HEADER TOP -->
             <!-- BEGIN HEADER MENU -->
             <div class="page-header-menu">
-                <div class="container">
+                <div class="container-fluid">
                     <!-- BEGIN MEGA MENU -->
                     <!-- DOC: Apply "hor-menu-light" class after the "hor-menu" class below to have a horizontal menu with white background -->
                     <!-- DOC: Remove data-hover="dropdown" and data-close-others="true" attributes below to disable the dropdown opening on mouse hover -->
                     <div class="hor-menu ">
                         <ul class="nav navbar-nav">
                             <li>
-                                <a href="#" class="tooltips" data-container="body" data-placement="bottom" data-html="true" data-original-title="Dashboard to view the overall status.">Dashboard</a>
+                                <a href="/sales" class="tooltips" data-container="body" data-placement="bottom" data-html="true" data-original-title="Dashboard">Dashboard</a>
                             </li>
-                        <% if params[:controller] == "sales" %>
-                            <li class="active">
-                                <a href="/sales" class="tooltips" data-container="body" data-placement="bottom" data-html="true" data-original-title="List of all sales.">Sales</a>
-                            </li>
-                        <% else %>
-                            <li>
-                                <a href="/sales" class="tooltips" data-container="body" data-placement="bottom" data-html="true" data-original-title="List of all sales.">Sales</a>
-                            </li>
-                        <% end %>
-                        
                          <% if params[:controller] == "contacts" %>
                             <li class="active">
                                 <a href="/contacts" class="tooltips" data-container="body" data-placement="bottom" data-html="true" data-original-title="Contact Detail">Contacts</a>
@@ -157,6 +157,16 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <a href="/cases" class="tooltips" data-container="body" data-placement="bottom" data-html="true" data-original-title="Cases Detail">Cases</a>
                                 </li>
                                 <% end %>
+
+                         <% if params[:controller] == "sales" %>
+                            <li class="active">
+                                <a href="/sales" class="tooltips" data-container="body" data-placement="bottom" data-html="true" data-original-title="List of all sales people">Sales People</a>
+                            </li>
+                        <% else %>
+                            <li> 
+                                <a href="/sales" class="tooltips" data-container="body" data-placement="bottom" data-html="true" data-original-title="List of all sales people">Sales People</a>
+                            </li>
+                        <% end %>
                         </ul>
                     </div>
                     <!-- END MEGA MENU -->
@@ -169,8 +179,8 @@ License: You must have a valid license purchased only from themeforest(the above
 
 <!-- BEGIN FOOTER -->
         <div class="page-footer">
-            <div class="container">
-                2015 &copy; UNIVERSAL POWER & LIGHT. All Rights Reserved.
+            <div class="container-fluid">
+                2015 &copy; ZEAL SALES. All Rights Reserved.
                 <a href="#" class="pull-right">Support</a>
             </div>
         </div>

@@ -10,7 +10,7 @@ var FormWizard = function () {
 
             function format(state) {
                 if (!state.id) return state.text; // optgroup
-                return "<img class='flag' src='img/flags/" + state.id.toLowerCase() + ".png'/>&nbsp;&nbsp;" + state.text;
+                return "<img class='flag' src='../../assets/global/img/flags/" + state.id.toLowerCase() + ".png'/>&nbsp;&nbsp;" + state.text;
             }
 
             $("#country_list").select2({
@@ -38,45 +38,79 @@ var FormWizard = function () {
                         minlength: 5,
                         required: true
                     },
-                    //wizard 1 for Personal info
+                    password: {
+                        minlength: 5,
+                        required: true
+                    },
+                    rpassword: {
+                        minlength: 5,
+                        required: true,
+                        equalTo: "#submit_form_password"
+                    },
+                    //profile
+                    fullname: {
+                        required: true
+                    },
                     email: {
                         required: true,
                         email: true
                     },
-                    lastname: {
-                        required: true                      
-                    },
-                    zip: {
+                    phone: {
                         required: true
                     },
-                    //Wizard 2 for security
-                    options1: {
+                    gender: {
                         required: true
                     },
-                    options2: {
+                    address: {
                         required: true
                     },
-                    options3: {
+                    city: {
                         required: true
                     },
-                    ans1: {
+                    country: {
                         required: true
                     },
-                    ans2: {
+                    //payment
+                    card_name: {
                         required: true
                     },
-                    ans3: {
+                    card_number: {
+                        minlength: 16,
+                        maxlength: 16,
                         required: true
                     },
-                    password: {
+                    card_cvc: {
+                        digits: true,
                         required: true,
-                        minlength: 6
+                        minlength: 3,
+                        maxlength: 4
                     },
-                    rpassword: {
+                    card_expiry_date: {
+                        required: true
+                    },
+                    'payment[]': {
                         required: true,
-                        equalTo: "#submit_form_password"
+                        minlength: 1
                     }
                 },
+
+                messages: { // custom messages for radio buttons and checkboxes
+                    'payment[]': {
+                        required: "Please select at least one option",
+                        minlength: jQuery.validator.format("Please select at least one option")
+                    }
+                },
+
+                errorPlacement: function (error, element) { // render error placement for each input type
+                    if (element.attr("name") == "gender") { // for uniform radio buttons, insert the after the given container
+                        error.insertAfter("#form_gender_error");
+                    } else if (element.attr("name") == "payment[]") { // for uniform checkboxes, insert the after the given container
+                        error.insertAfter("#form_payment_error");
+                    } else {
+                        error.insertAfter(element); // for other inputs, just perform default behavior
+                    }
+                },
+
                 invalidHandler: function (event, validator) { //display error alert on form submit   
                     success.hide();
                     error.show();
@@ -113,13 +147,33 @@ var FormWizard = function () {
 
             });
 
-           
+            var displayConfirm = function() {
+                $('#tab4 .form-control-static', form).each(function(){
+                    var input = $('[name="'+$(this).attr("data-display")+'"]', form);
+                    if (input.is(":radio")) {
+                        input = $('[name="'+$(this).attr("data-display")+'"]:checked', form);
+                    }
+                    if (input.is(":text") || input.is("textarea")) {
+                        $(this).html(input.val());
+                    } else if (input.is("select")) {
+                        $(this).html(input.find('option:selected').text());
+                    } else if (input.is(":radio") && input.is(":checked")) {
+                        $(this).html(input.attr("data-title"));
+                    } else if ($(this).attr("data-display") == 'payment[]') {
+                        var payment = [];
+                        $('[name="payment[]"]:checked', form).each(function(){ 
+                            payment.push($(this).attr('data-title'));
+                        });
+                        $(this).html(payment.join("<br>"));
+                    }
+                });
+            }
 
             var handleTitle = function(tab, navigation, index) {
                 var total = navigation.find('li').length;
                 var current = index + 1;
                 // set wizard title
-               // $('.step-title', $('#form_wizard_1')).text('Step ' + (index + 1) + ' of ' + total);
+                $('.step-title', $('#form_wizard_1')).text('Step ' + (index + 1) + ' of ' + total);
                 // set done steps
                 jQuery('li', $('#form_wizard_1')).removeClass("done");
                 var li_list = navigation.find('li');
@@ -136,7 +190,7 @@ var FormWizard = function () {
                 if (current >= total) {
                     $('#form_wizard_1').find('.button-next').hide();
                     $('#form_wizard_1').find('.button-submit').show();
-                    
+                    displayConfirm();
                 } else {
                     $('#form_wizard_1').find('.button-next').show();
                     $('#form_wizard_1').find('.button-submit').hide();
@@ -162,6 +216,11 @@ var FormWizard = function () {
                 onNext: function (tab, navigation, index) {
                     success.hide();
                     error.hide();
+
+                    if (form.valid() == false) {
+                        return false;
+                    }
+
                     handleTitle(tab, navigation, index);
                 },
                 onPrevious: function (tab, navigation, index) {
@@ -181,11 +240,8 @@ var FormWizard = function () {
             });
 
             $('#form_wizard_1').find('.button-previous').hide();
-            $('#form_wizard_1 .button-validate').click(function () {
-                form.valid();
-            })
             $('#form_wizard_1 .button-submit').click(function () {
-                return true;
+                alert('Finished! Hope you like it :)');
             }).hide();
         }
 

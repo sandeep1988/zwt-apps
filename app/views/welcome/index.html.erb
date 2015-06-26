@@ -18,15 +18,15 @@ License: You must have a valid license purchased only from themeforest(the above
     <!-- BEGIN HEAD -->
     <head>
         <meta charset="utf-8"/>
-        <title>UPL | Login</title>
+        <title>ZEAL | SALES Login</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8">
         <meta content="" name="description"/>
         <meta content="" name="author"/>
         <!-- BEGIN GLOBAL MANDATORY STYLES -->
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
-        <link href="/assets/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
         <link href="/assets/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
         <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="/assets/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
@@ -39,8 +39,8 @@ License: You must have a valid license purchased only from themeforest(the above
         <link href="/assets/components-rounded.css" id="style_components" rel="stylesheet" type="text/css"/>
         <link href="/assets/plugins.css" rel="stylesheet" type="text/css"/>
         <link href="/assets/layout.css" rel="stylesheet" type="text/css"/>
-        <link href="/assets/layout/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color"/>
-        <link href="/assets/custom.css" rel="stylesheet" type="text/css"/>
+        <link href="/assets/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+        <link href="/assets/css/custom.css" rel="stylesheet" type="text/css"/>
         <!-- END THEME STYLES -->
         <link rel="shortcut icon" href="favicon.ico"/>
     </head>
@@ -49,8 +49,8 @@ License: You must have a valid license purchased only from themeforest(the above
     <body class="login">
         <!-- BEGIN LOGO -->
         <div class="logo">
-            <a href="index.html">
-                <img src="/assets/logo-big.png" alt=""/>
+            <a href="/">
+                <img src="/assets/logo_zwt.png" alt="default"/>
             </a>
         </div>
         <!-- END LOGO -->
@@ -62,11 +62,11 @@ License: You must have a valid license purchased only from themeforest(the above
         <div class="content">
             <!-- BEGIN LOGIN FORM -->
             <form class="login-form" action="/sales" method="post" novalidate="novalidate">
-                <h3 class="form-title">Login to your account</h3>
+                <h3 class="form-title">Login to your use account</h3>
                 <div class="alert alert-success alert-dismissable display-hide">
-					<button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
-					You are successfully logged out.
-				</div>
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+                    You are successfully logged out.
+                </div>
                 <div class="alert alert-danger display-hide">
                     <button class="close" data-close="alert"></button>
                     <span>Enter any username and password. </span>
@@ -87,9 +87,10 @@ License: You must have a valid license purchased only from themeforest(the above
                     </div>
                 </div>
                 <label class="checkbox"> 
-<input type="checkbox" name="remember" value="1"/> Remember me </label>            
+                        <input type="checkbox" name="remember" value="1"/> Remember me </label> 
                 <div class="form-actions clearfix">
-                    
+                    <!--<label class="checkbox"> 
+<input type="checkbox" name="remember" value="1"/> Remember me </label>-->
 
                     <button type="submit" class="btn default pull-left">
                         Validate <i class="m-icon-swapright m-icon-big"></i>
@@ -100,15 +101,13 @@ License: You must have a valid license purchased only from themeforest(the above
                 <div class="forget-password"> 
                     <h4>Forgot your password ?</h4>
                     <p>
-                        No worries, click <a href="/welcome/forget_password_developer" id="">
-                        here </a>
-                        to reset your password.
+                        click <a href="javascript:;" id="forget-password">here</a> to reset your password.
                     </p>
                 </div>
             </form>
             <!-- END LOGIN FORM -->
             <!-- BEGIN FORGOT PASSWORD FORM -->
-            <form class="forget-form" action="index.html" method="post">
+            <form class="forget-form" action="/sales" method="post">
                 <h3>Forget Password ?</h3>
                 <p>
                     Enter your e-mail address below to reset your password.
@@ -129,7 +128,7 @@ License: You must have a valid license purchased only from themeforest(the above
             </form>
             <!-- END FORGOT PASSWORD FORM -->
             <!-- BEGIN REGISTRATION FORM -->
-            <form class="register-form" action="index.html" method="post">
+            <form class="register-form" action="/sales" method="post">
                 <h3>Sign Up</h3>
                 <p>
                     Enter your personal details below:
@@ -453,7 +452,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <!-- END LOGIN -->
         <!-- BEGIN COPYRIGHT -->
         <div class="copyright">
-            2015 &copy; UNIVERSAL POWER & LIGHT. All Rights Reserved.
+            2015 &copy; ZEAL SALES. All Rights Reserved.
         </div>
         <!-- END COPYRIGHT -->
         <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->

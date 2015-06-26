@@ -1,5 +1,5 @@
           <div class="page-head">
-                <div class="container">
+                <div class="container-fluid">
                     <!-- BEGIN PAGE TITLE -->
                     <div class="page-title">
                         <h1>Contact</h1>
@@ -8,59 +8,27 @@
                     <!-- BEGIN PAGE TOOLBAR -->
                     <div class="page-toolbar">
                         <!-- BEGIN THEME PANEL -->
-                        <div class="btn-group btn-theme-panel">
-                            <a href="javascript:;" class="btn dropdown-toggle"  data-hover="dropdown" data-toggle="dropdown">
-                                <i class="icon-settings"></i>
-                            </a>
-                            <ul class="dropdown-menu pull-right">
-                                <li>
-                                    <a href="javascript:;">
-                                        <i class="icon-settings"></i>Settings </a>
-                                </li>
-                                
-                            </ul>
-                        </div>
+                        
                     </div>
                     <!-- END PAGE TOOLBAR -->
                 </div>
             </div>
           </div> 
-  <div class="page-content">
-                <div class="container">
-                    <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
-                    <div class="modal fade" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                                    <h4 class="modal-title">Modal title</h4>
-                                </div>
-                                <div class="modal-body">
-                                    Widget settings form goes here
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn blue">Save changes</button>
-                                    <button type="button" class="btn default" data-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                            <!-- /.modal-content -->
-                        </div>
-                        <!-- /.modal-dialog -->
-                    </div>
-                    <!-- /.modal -->
+          <div class="page-content">
+                <div class="container-fluid">
                     <!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
                     <!-- BEGIN PAGE BREADCRUMB -->
                     <ul class="page-breadcrumb breadcrumb">
                         <li>
-                            <a href="#">Dashboard</a><i class="fa fa-circle"></i>
+                            <a href="/dashboard">Dashboard</a><i class="fa fa-circle"></i>
                         </li>
                         <li>
-                            <a href="#">Contacts</a><i class="fa fa-circle"></i>
+                            <a href="/contacts">Contacts</a><i class="fa fa-circle"></i>
                         </li>
                         <li class="active">
-                            Test22 Smothsonian
-                        </li>
-                    </ul>
+                            Chris Monnat
+                        </li>                        
+                    </ul>                    
                     <!-- END PAGE BREADCRUMB -->
                     <!-- BEGIN PAGE CONTENT INNER -->
                     <div class="row" id="product_detail">
@@ -75,9 +43,8 @@
                                             <span class="caption-subject font-green-sharp bold uppercase">Contact Info</span>
                                         </div>
                                     </div>
-                                    <h4 class="block"><a id="show_summry" href="#invest_summry" data-toggle="modal">Contact Summary</a></h4>
                                     <p>
-                                        <strong><a href="#">Test22 Smothsonian</a></strong>
+                                        <strong><a href="/contacts/1/edit">Test Title22  Smothsonian</a></strong>
                                     </p>
                                      <p>
                                         <strong>Cell Number</strong> <br>
@@ -93,7 +60,8 @@
                                     </p>
                                     <p>
                                         <strong>Website URL </strong> <br>
-                                          www.zealousweb.com
+                                        <a target="_blank" href="https://www.zealousweb.com">
+                                            www.zealousweb.com</a>
                                     </p>
                                     <p>
                                         <strong>IM (Skype)</strong> <br>
@@ -125,10 +93,10 @@
                                 <div class="portlet light">
                                     <div class="portlet-title margin-bottom-0">
                                         <div class="caption">                                            
-                                            <span class="caption-subject font-green-sharp bold uppercase"><span class="icon-briefcase" aria-hidden="false"></span> &nbsp;Test22 Smothsonian</span>
+                                            <span class="caption-subject font-green-sharp bold uppercase"><span class="icon-briefcase" aria-hidden="false"></span> Chris Monnat</span>
                                         </div>                               
                                         <div class="btn-group key_resource pull-right">
-                                            <button data-toggle="dropdown" class="btn green-haze btn-responsive dropdown-toggle" data-hover="dropdown" aria-expanded="true">Key Resources <i class="fa fa-angle-down"></i></button>
+                                            <button data-toggle="dropdown" class="btn green-haze btn-responsive pull-right dropdown-toggle" data-hover="dropdown" aria-expanded="true">Key Resources <i class="fa fa-angle-down"></i></button>
                                             <ul class="dropdown-menu dropdown-menu-right" role="menu">
                                                 <li role="presentation">
                                                     <a role="menuitem" tabindex="-1" href="/contacts/1/edit">Edit Contact</a>
@@ -136,7 +104,7 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="portlet-body inbox col-md-8 p0">
+                                    <div class="inbox p0">
 
 
                                         <div class="tabbable-custom">
@@ -146,335 +114,175 @@
                                                         Follow Up </a>
                                                 </li>
                                             </ul>
-                                            <div class="tab-content">
+                                           <div class="tab-content">
                                                 <!--Add a note tab-->
                                                 <div class="tab-pane active" id="portlet_tab1">
-                                                    <form action="#" class="form">
-                                                        
-                                                      <div class="form-group">
-                                                        <label class="control-label col-md-4" for="inputWarning">Case ID</label>
-                                                        <div class="col-md-8">
-                                                          <input type="text" name="caseid" class="form-control">
-                                                          <span class="help-block">Fill Case ID(Optional)  </span>
+                                                    <form role="form" id="form_sample_3" class="horizontal-form form" method="post" action="javascript:;">
+                                                        <div class="alert alert-success display-hide">
+                                                            <button class="close" data-close="alert"></button>
+                                                            Sales person information are successfully Added! 
                                                         </div>
-                                                      </div>
-
-                                                      <div class="form-group">
-                                                        <div class="col-xs-12 col-sm-7 col-md-12">
-                                                                <label class="col-md-4 col-sm-5 pl0 col-xs-12 control-label" for="">Followed Up Date </label>
-                                                                <div data-date-start-date="+0d" data-date-format="mm-dd-yyyy" class="input-group col-md-8 col-sm-5 date date-picker">
-                                                                    <input type="text" readonly="" class="form-control">
-                                                                    <span class="input-group-btn">
-                                                                        <button type="button" class="btn default"><i class="fa fa-calendar"></i></button>
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                          </div>
-
-                                                      <div class="form-group">
-                                                            <label class="control-label col-md-4" for="inputWarning">Followed Up Type </label>
-                                                           <div class="col-md-8">
-                                                          <select class="form-control select2me" name="followed_up_type">
-                                                            <option value="end_client">Phone</option>
-                                                            <option value="">IM(Skype)</option>
-                                                            <option value="">Email</option>
-                                                            <option value="">Social Media</option>
-                                                            </select>
+                                                        <div class="alert alert-danger display-hide">
+                                                            <button class="close" data-close="alert"></button>
+                                                            You have some form errors. Please check below.
                                                         </div>
-                                                      </div>
-
-                                                    <div class="form-group">
-                                                        <label class="control-label col-md-4" for="inputWarning">Followed Up By </label>
-                                                      <div class="col-md-8">
-                                                          <input type="text" name="followed__up_by " class="form-control">
-                                                          <span class="help-block">Fill Followed Up By </span>
-                                                      </div>
-                                                    </div>
-
-                                                    <div class="form-group">
-                                                        <label class="control-label col-md-4" for="inputWarning">Outcome </label>
-                                                        <div class="col-md-8">
-                                                            <textarea name="outcome" class="form-control" id="" cols="20" rows="6" placeholder="Add a note about Outcome"></textarea>
-                                                            <span class="help-block">Fill Outcome </span>
-                                                        </div>
-                                                    </div>
-
-                                                      <div class="form-group">
-                                                        <div class="col-xs-12 col-sm-7 col-md-12">
-                                                                <label class="col-md-4 col-sm-5 pl0 col-xs-12 control-label" for="">Next Followed Up Date </label>
-                                                                <div data-date-start-date="+0d" data-date-format="mm-dd-yyyy" class="input-group col-md-8 col-sm-5 date date-picker">
-                                                                    <input type="text" readonly="" class="form-control">
-                                                                    <span class="input-group-btn">
-                                                                        <button type="button" class="btn default"><i class="fa fa-calendar"></i></button>
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                          </div>
-
-                                                      <div class="form-group">
-                                                            <label class="control-label col-md-4" for="inputWarning">Next Follow Up Type </label>
-                                                        <div class="col-md-8">
-                                                            <select class="form-control select2me" name="contact_type">
-                                                            <option value="end_client">Phone</option>
-                                                            <option value="">IM(Skype)</option>
-                                                            <option value="">Email</option>
-                                                            <option value="">Social Media</option>
-                                                            </select>
-                                                        </div>
-                                                      </div>
-
-                                                      <div class="form-group" style="clear: both;">
-                                                        <label class="control-label col-md-4" for="inputWarning">Next Follow Up By</label>
-                                                        <div class="col-md-8">
-                                                          <input type="text" name="next_follow_up_By" class="form-control">
-                                                          <span class="help-block">Fill Next Follow Up By  </span>
-                                                        </div>
-                                                      </div>
-
-                                                    
-                                                        <div class="form-actions right" style="clear: both;">
-                                                    
-                                                            <button type="submit" class="btn col-md-offset-1 btn-responsive green-haze">Save Notes</button>
-                                                        </div>
-                                                    </form>
-
-                                                </div>
-
-                                                <!--Log a call tab-->
-                                                <div class="tab-pane" id="portlet_tab2">
-                                                    <form action="#" class="form form-horizontal ">
-                                                        <div class="form-group">
-                                                            <textarea name="" class="form-control" id="" cols="20" rows="6" placeholder="Add a note about the call"></textarea>
-                                                        </div>
-                                                        <div class="form-actions right">
-                                                            <button type="submit" class="btn col-xs-12 col-sm-5 col-md-4 green-haze">Log Call</button>
-                                                            <div class="col-xs-12 col-sm-7 col-md-8">
-                                                                <label for="" class="col-md-4 col-sm-5 pl0 col-xs-12 control-label">Date of call</label>
-                                                                <div class="input-group col-md-8 col-sm-5 date date-picker" data-date-format="mm-dd-yyyy" data-date-start-date="+0d">
-                                                                    <input type="text" class="form-control" readonly>
-                                                                    <span class="input-group-btn">
-                                                                        <button class="btn default" type="button"><i class="fa fa-calendar"></i></button>
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                                <div class="tab-pane" id="portlet_tab3">
-                                                    <form action="#" class="form">
-                                                        <div class="form-group">
-                                                            <div class="input-icon">
-                                                                <i class="fa fa-pencil"></i>
-                                                                <input type="text" class="form-control" placeholder="File name">
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <div class="fileinput fileinput-new" data-provides="fileinput">
-                                                                <div class="input-group input-large">
-
-                                                                    <span class="input-group-addon btn yellow btn-file">
-
-                                                                        <span class="fileinput-new">
-                                                                            <i class="fa fa-cloud-upload "></i> Choose file </span>
-                                                                        <span class="fileinput-exists">
-                                                                            Change </span>
-                                                                        <input type="hidden">
-                                                                        <input type="file" name="...">
-                                                                    </span>
-                                                                    <a href="javascript:;" class="input-group-addon btn red fileinput-exists" data-dismiss="fileinput">
-                                                                        Remove </a>
-                                                                    <div class="form-control uneditable-input span3" data-trigger="fileinput">
-                                                                        <i class="fa fa-file fileinput-exists"></i>&nbsp; <span class="fileinput-filename">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <label style="padding-left:0px" class="control-label col-md-4">Date <span class="required">*</span></label>
+                                                                    <div data-date-start-date="+0d" data-date-format="mm-dd-yyyy" class="input-group col-md-8 date date-picker" style="padding-left: 10px;">
+                                                                        <input type="text" readonly="" placeholder="Followed Up Date" class="form-control" />
+                                                                        <span class="input-group-btn">
+                                                                            <button type="button" class="btn default"><i class="fa fa-calendar"></i></button>
                                                                         </span>
                                                                     </div>
                                                                 </div>
+                                                            </div>                                                    
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <label class="control-label pull-left col-md-4">Type <span class="required">*</span></label>
+                                                                    <div class="col-md-8">
+                                                                        <select class="form-control select2me" name="followed_up_type">
+                                                                            <option value="Phone">Phone</option>
+                                                                            <option value="IM(Skype)">IM(Skype)</option>
+                                                                            <option value="Email">Email</option>
+                                                                            <option value="Social Media">Social Media</option>
+                                                                        </select>
+                                                                    </div>                                                                    
+                                                                </div>
+                                                            </div>                                                       
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <label class="control-label col-md-4">Followed Up By <span class="required">*</span></label>
+                                                                    <div class="col-md-8">
+                                                                    <input type="text" disabled="" class="form-control" value="Kavis Jash" />
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                            <span class="help-block"><i class="fa fa-chevron-up"></i> Or Drop File Here</span>
-
                                                         </div>
-                                                        <div class="form-group">
-                                                            <input id="tags_2" type="text" class="form-control tags medium" placeholder="Tags.." value="tag1,tag2"/>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label class="control-label" for="inputWarning">Outcome* </label>
+                                                                    <textarea name="outcome" class="form-control" id="" rows="4" placeholder="Add a note about Outcome"></textarea>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                        <div class="form-actions right">
-                                                            <button type="submit" class="btn">Cancel</button>
-                                                            <button type="submit" class="btn green-haze">Upload File</button>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label class="caption-subject font-green-sharp bold uppercase">Future Follow Up</label>
+                                                                </div>
+                                                            </div>
                                                         </div>
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <label style="padding-left:0px" class="control-label col-md-4">Date </label>
+                                                                    <div data-date-start-date="+0d" data-date-format="mm-dd-yyyy" class="input-group col-md-8 date date-picker" style="padding-left: 10px;">
+                                                                        <input type="text" readonly="" placeholder="Next Follow Up Date" class="form-control" />
+                                                                        <span class="input-group-btn">
+                                                                            <button type="button" class="btn default"><i class="fa fa-calendar"></i></button>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>                                                    
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <label class="control-label col-md-4">Type </label>
+                                                                    <div class="col-md-8">
+                                                                        <select class="form-control select2me" name="followed_up_type">
+                                                                            <option value="Phone">Phone</option>
+                                                                            <option value="IM(Skype)">IM(Skype)</option>
+                                                                            <option value="Email">Email</option>
+                                                                            <option value="Social Media">Social Media</option>
+                                                                        </select>
+                                                                    </div>                                                                    
+                                                                </div>
+                                                            </div>                                                       
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <label class="control-label col-md-4">Person Reponsible</label>
+                                                                    
+                                                                      <div class="col-md-8">
+                                                                          <select class="form-control select2me" name="followed_up_type">
+                                                                              <option value="test_sales_perseon1">Test Sales Person1 </option>
+                                                                              <option value="test_sales_perseon2">Test Sales Person2</option>
+                                                                              <option value="test_sales_perseon3">Test Sales Person3 </option>
+                                                                              <option value="test_sales_perseon4">Test Sales Person4</option>
+                                                                          </select>                                                                          
+                                                                      </div>                                                                   
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="form-actions">
+            												<div class="row">
+            													<div class="col-md-12">
+            														<div class="row">
+            															<div class="col-md-offset-10">
+            																<button class="btn green" type="submit">Submit</button>
+                                                                            <button class="btn default" type="button">Reset</button>
+            															</div>
+            														</div>
+            													</div>            													
+            												</div>
+            											</div>                                                        
                                                     </form>
-
-                                                </div>
-                                                <div class="tab-pane" id="portlet_tab4">
-                                                    <div class="inbox-loading">Loading...</div>
-                                                    <div class="inbox-content"></div>
                                                 </div>
                                             </div>
                                         </div> 
                                               
-
-
-
-                                    <div class="activity_container">
-                                            <div class="title">
-                                                <div class="form-group col-xs-8 col-md-12 pl0">
-                                                    <label class="control-label hidden-xs">Displaying</label>
-                                                    <select data-style="btn btn-sm blue-hoki" class="bs-select">
-                                                        <option>All Developer-Related Activity </option>
-                                                        <option>All Project-Related Activity</option>
-                                                    </select>
-                                                </div>
-
-                                                <div class="clearfix"><!----></div>                                                
-                                            </div>
-                                            <div class="act_blk icon-btn panel-danger">
-                                                <i class="fa fa-pencil top-news-icon"></i>
-                                                <div class="btn-group pull-right">
-                                                    <a href="#" data-toggle="dropdown" class="btn btn-default" data-hover="dropdown" aria-expanded="true"><i class="fa fa-angle-down"></i></a>
-                                                    <ul class="dropdown-menu dropdown-menu-left" role="menu">
-                                                        <li role="presentation">
-                                                            <a role="menuitem" tabindex="-1" href="javascript:;">
-                                                                Edit this activity
-                                                            </a>
-                                                        </li>
-                                                        <li role="presentation">
-                                                            <a role="menuitem" tabindex="-1" href="javascript:;">
-                                                                Delete this activity
-                                                            </a>
-                                                        </li>
-                                                        <li role="presentation">
-                                                            <a role="menuitem" tabindex="-1" href="javascript:;">Option Three</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <span>Jan 25, 2014 8:04 AM <strong>(Marked Critical)</strong> | <a href="#">Joy Smith (Employee Name)</a></span>
-
-                                                <p>Lorem ipsum dolor sit amet, consectetur minus inventore facilis ducimus, repellendus recusandae quo saepe numquam delectus laudantium, ipsam eum quam pariatur dicta eveniet!
-                                                    <span class="block panel-collapse collapse" id="collapse_1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae corporis, labore fugiat dolor amet quod consequuntur, laudantium, exercitationem quae sapiente tenetur obcaecati sit! Distinctio assumenda, consequatur eum. Cum voluptate, doloribus eligendi velit incidunt sequi. Ratione unde, reiciendis nihil, harum distinctio, accusamus quam facere debitis ea, voluptates repellat cupiditate sed provident fugit autem ipsa incidunt odit totam numquam. Autem in animi quidem</span>
-                                                    <a data-toggle="collapse" data-parent=".panel-danger" href="#collapse_1" class="accordion-toggle accordion-toggle-styled collapsed" aria-expanded="true"><span>Expand</span><i>Callape</i></a>
-                                                </p>
-                                            </div>
-
-                                            <div class="act_blk icon-btn ">
-                                                <i class="fa fa-pencil top-news-icon"></i>
-                                                <div class="btn-group pull-right">
-                                                    <a href="#" data-toggle="dropdown" class="btn btn-default" data-hover="dropdown" aria-expanded="true"><i class="fa fa-angle-down"></i></a>
-                                                    <ul class="dropdown-menu dropdown-menu-left" role="menu">
-                                                        <li role="presentation">
-                                                            <a role="menuitem" tabindex="-1" href="javascript:;">
-                                                                Edit this activity
-                                                            </a>
-                                                        </li>
-                                                        <li role="presentation">
-                                                            <a role="menuitem" tabindex="-1" href="javascript:;">
-                                                                Delete this activity
-                                                            </a>
-                                                        </li>
-                                                        <li role="presentation">
-                                                            <a role="menuitem" tabindex="-1" href="javascript:;">Option Three</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <span>Jan 25, 2014 8:04 AM | <a href="#">Joy Smith</a></span>
-
-                                                <p>Lorem ipsum dolor sit amet, consectetur minus inventore facilis ducimus, repellendus recusandae quo saepe numquam delectus laudantium, ipsam eum quam pariatur dicta eveniet!
-                                                    <span class="block panel-collapse collapse" id="collapse_2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae corporis, labore fugiat dolor amet quod consequuntur, laudantium, exercitationem quae sapiente tenetur obcaecati sit! Distinctio assumenda, consequatur eum. Cum voluptate, doloribus eligendi velit incidunt sequi. Ratione unde, reiciendis nihil, harum distinctio, accusamus quam facere debitis ea, voluptates repellat cupiditate sed provident fugit autem ipsa incidunt odit totam numquam. Autem in animi quidem</span>
-                                                    <a data-toggle="collapse" data-parent=".panel-danger" href="#collapse_2" class="accordion-toggle accordion-toggle-styled collapsed" aria-expanded="true"><span>Expand</span><i>Callape</i></a>
-                                                </p>
-                                            </div>
-
+                                        <div class="activity_container">
                                             <div class="act_blk icon-btn">
-                                                <i class="fa  fa-file-text-o top-news-icon"></i>
-                                                <div class="btn-group pull-right">
-                                                    <a href="#" data-toggle="dropdown" class="btn btn-default" data-hover="dropdown" aria-expanded="true"><i class="fa fa-angle-down"></i></a>
-                                                    <ul class="dropdown-menu dropdown-menu-left" role="menu">
-                                                        <li role="presentation">
-                                                            <a role="menuitem" tabindex="-1" href="javascript:;">
-                                                                Edit this activity
-                                                            </a>
-                                                        </li>
-                                                        <li role="presentation">
-                                                            <a role="menuitem" tabindex="-1" href="javascript:;">
-                                                                Delete this activity
-                                                            </a>
-                                                        </li>
-                                                        <li role="presentation">
-                                                            <a role="menuitem" tabindex="-1" href="javascript:;">Option Three</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <span>Jan 23, 2014 8:04 AM | <a href="#">Joy Smith</a></span>
+                                                <i class="fa  fa-file-text-o top-news-icon" title="Email"></i>
+                                                <span>Jan 23, 2014 8:04 AM | <a href="#">Kavis Jash</a></span>
                                                 <p>Lorem ipsum dolor sit amet, consectetur minus inventore facilis ducimus, repellendus recusandae quo saepe numquam delectus laudantium, ipsam eum quam pariatur dicta eveniet!
-                                                    <span class="block panel-collapse collapse" id="collapse_3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae corporis, labore fugiat dolor amet quod consequuntur, laudantium, exercitationem quae sapiente tenetur obcaecati sit! Distinctio assumenda, consequatur eum. Cum voluptate, doloribus eligendi velit incidunt sequi. Ratione unde, reiciendis nihil, harum distinctio, accusamus quam facere debitis ea, voluptates repellat cupiditate sed provident fugit autem ipsa incidunt odit totam numquam. Autem in animi quidem</span>
-                                                    <a data-toggle="collapse" data-parent=".panel-danger" href="#collapse_3" class="accordion-toggle accordion-toggle-styled collapsed" aria-expanded="true"><span>Expand</span><i>Callape</i></a>
+                                                    <span class="block" id="collapse_3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae corporis, labore fugiat dolor amet quod consequuntur, laudantium, exercitationem quae sapiente tenetur obcaecati sit! Distinctio assumenda, consequatur eum. Cum voluptate, doloribus eligendi velit incidunt sequi. Ratione unde, reiciendis nihil, harum distinctio, accusamus quam facere debitis ea, voluptates repellat cupiditate sed provident fugit autem ipsa incidunt odit totam numquam. Autem in animi quidem</span>         
                                                 </p>
-                                            </div>
-                                            <div class="act_blk icon-btn">
-                                                <i class="fa fa-check top-news-icon"></i>
-
-                                                <span>Jan 25, 2014 8:04 AM | <a href="#">Kim Jone</a></span>
-                                                <p><a href="#">Kim Jone</a> completed the Generate Milestone (Name of action goes here).</p>
-                                            </div>
-                                            <div class="act_blk icon-btn">
-                                                <i class="fa fa-phone top-news-icon"></i>
-                                                <div class="btn-group pull-right">
-                                                    <a href="#" data-toggle="dropdown" class="btn btn-default" data-hover="dropdown" aria-expanded="true"><i class="fa fa-angle-down"></i></a>
-                                                    <ul class="dropdown-menu dropdown-menu-left" role="menu">
-                                                        <li role="presentation">
-                                                            <a role="menuitem" tabindex="-1" href="javascript:;">
-                                                                Edit this activity
-                                                            </a>
-                                                        </li>
-                                                        <li role="presentation">
-                                                            <a role="menuitem" tabindex="-1" href="javascript:;">
-                                                                Delete this activity
-                                                            </a>
-                                                        </li>
-                                                        <li role="presentation">
-                                                            <a role="menuitem" tabindex="-1" href="javascript:;">Option Three</a>
-                                                        </li>
-                                                    </ul>
+                                                <span class="caption-subject font-green-sharp bold uppercase">Future Follow Up</span>
+                                                <div>
+                                                    <div style="padding-left: 0px;" class="col-md-4"><label>Date:</label> Jan 23, 2014</div>
+                                                    <div class="col-md-4"><label>Type:</label> Phone</div>
+                                                    <div class="col-md-4"><label>Person Reponsible:</label> <a href="#">Kavis Jash</a></div>
                                                 </div>
+                                            </div>
+                                            
+                                            <div class="act_blk icon-btn">
+                                                <i class="fa fa-phone top-news-icon" title="Phone"></i>
                                                 <span>Jan 21, 2014 9:07 AM | <a href="#">Joy Smith</a></span>
                                                 <p>Lorem ipsum dolor sit amet, consectetur minus inventore facilis ducimus, repellendus recusandae quo saepe numquam delectus laudantium, ipsam eum quam pariatur dicta eveniet!
-                                                    <span class="block panel-collapse collapse" id="collapse_4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae corporis, labore fugiat dolor amet quod consequuntur, laudantium, exercitationem quae sapiente tenetur obcaecati sit! Distinctio assumenda, consequatur eum. Cum voluptate, doloribus eligendi velit incidunt sequi. Ratione unde, reiciendis nihil, harum distinctio, accusamus quam facere debitis ea, voluptates repellat cupiditate sed provident fugit autem ipsa incidunt odit totam numquam. Autem in animi quidem</span>
-                                                    <a data-toggle="collapse" data-parent=".panel-danger" href="#collapse_4" class="accordion-toggle accordion-toggle-styled collapsed" aria-expanded="true"><span>Expand</span><i>Callape</i></a>
+                                                    <span class="block" id="collapse_4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae corporis, labore fugiat dolor amet quod consequuntur, laudantium, exercitationem quae sapiente tenetur obcaecati sit! Distinctio assumenda, consequatur eum. Cum voluptate, doloribus eligendi velit incidunt sequi. Ratione unde, reiciendis nihil, harum distinctio, accusamus quam facere debitis ea, voluptates repellat cupiditate sed provident fugit autem ipsa incidunt odit totam numquam. Autem in animi quidem</span>         
                                                 </p>
-                                            </div>
-                                            <div class="act_blk icon-btn">
-                                                <i class="fa fa-recycle top-news-icon"></i>
-                                                <span>Jan 25, 2014 9:07 AM</span>
-                                                <p>Stage Changed from Review to Deploy Stage by <a href="#">Kim</a></p>
-                                            </div>
-                                            <div class="act_blk icon-btn">
-                                                <i class="fa fa-envelope top-news-icon"></i>
-                                                <div class="btn-group pull-right">
-                                                    <a href="#" data-toggle="dropdown" class="btn btn-default" data-hover="dropdown" aria-expanded="true"><i class="fa fa-angle-down"></i></a>
-                                                    <ul class="dropdown-menu dropdown-menu-left" role="menu">
-                                                        <li role="presentation">
-                                                            <a role="menuitem" tabindex="-1" href="javascript:;">
-                                                                Edit this activity
-                                                            </a>
-                                                        </li>
-                                                        <li role="presentation">
-                                                            <a role="menuitem" tabindex="-1" href="javascript:;">
-                                                                Delete this activity
-                                                            </a>
-                                                        </li>
-                                                        <li role="presentation">
-                                                            <a role="menuitem" tabindex="-1" href="javascript:;">Option Three</a>
-                                                        </li>
-                                                    </ul>
+                                                <span class="caption-subject font-green-sharp bold uppercase">Future Follow Up</span>
+                                                <div>
+                                                    <div style="padding-left: 0px;" class="col-md-4"><label>Date:</label> Jan 23, 2014</div>
+                                                    <div class="col-md-4"><label>Type:</label> Phone</div>
+                                                    <div class="col-md-4"><label>Person Reponsible:</label> <a href="#">Kavis Jash</a></div>
                                                 </div>
-                                                <span>Jan 21, 2014 9:07 AM | From <a href="#">Louis Litt</a> | via Email</span>
-                                                <p><strong>Subject Goes Here</strong></p>
+                                            </div>    
+                                            
+                                            <div class="act_blk icon-btn">
+                                                <i class="fa fa-phone top-news-icon" title="Phone"></i>
+                                                <span>Jan 21, 2014 9:07 AM | <a href="#">Joy Smith</a></span>
+                                                <h4>Case: <a href="#case-detail" data-toggle="modal"> Case title will display here with long text</a></h4>
                                                 <p>Lorem ipsum dolor sit amet, consectetur minus inventore facilis ducimus, repellendus recusandae quo saepe numquam delectus laudantium, ipsam eum quam pariatur dicta eveniet!
-                                                    <span class="block panel-collapse collapse" id="collapse_5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae corporis, labore fugiat dolor amet quod consequuntur, laudantium, exercitationem quae sapiente tenetur obcaecati sit! Distinctio assumenda, consequatur eum. Cum voluptate, doloribus eligendi velit incidunt sequi. Ratione unde, reiciendis nihil, harum distinctio, accusamus quam facere debitis ea, voluptates repellat cupiditate sed provident fugit autem ipsa incidunt odit totam numquam. Autem in animi quidem</span>
-                                                    <a data-toggle="collapse" data-parent=".panel-danger" href="#collapse_5" class="accordion-toggle accordion-toggle-styled collapsed" aria-expanded="true"><span>Expand</span><i>Callape</i></a>
+                                                    <span class="block" id="collapse_4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae corporis, labore fugiat dolor amet quod consequuntur, laudantium, exercitationem quae sapiente tenetur obcaecati sit! Distinctio assumenda, consequatur eum. Cum voluptate, doloribus eligendi velit incidunt sequi. Ratione unde, reiciendis nihil, harum distinctio, accusamus quam facere debitis ea, voluptates repellat cupiditate sed provident fugit autem ipsa incidunt odit totam numquam. Autem in animi quidem</span>         
                                                 </p>
-                                            </div>
-                                        </div>                                   
-                                    </div>
-                                    
+                                                <span class="caption-subject font-green-sharp bold uppercase">Future Follow Up</span>
+                                                <div>
+                                                    <div style="padding-left: 0px;" class="col-md-4"><label>Date:</label> Jan 23, 2014</div>
+                                                    <div class="col-md-4"><label>Type:</label> Phone</div>
+                                                    <div class="col-md-4"><label>Person Reponsible:</label> <a href="#">Kavis Jash</a></div>
+                                                </div>
+                                            </div>    
+                                            
+                                        </div>
 
-                                   
+
+                                                                       
+                                    </div>
+                                   <div class="clearfix"></div>
                                 </div>
                             </div>
                         </div>
@@ -484,6 +292,55 @@
                 <!-- END PAGE CONTENT INNER -->
             </div>
         </div>
+        
+        <div class="modal fade bs-modal-lg" id="case-detail" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                        <h4 class="modal-title">Case Info</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="light">
+                        <p>
+                            <strong>Title</strong> <br>
+                            <strong><a href="/cases/details">Case title will display here with long text</a></strong>
+                        </p>
+                        <p>
+                            <strong>Reference Urls</strong> <br>
+                            <a target="_blank" href="http://www.zealousweb.com">http://www.zealousweb.com</a>, <a target="_blank" href="http://www.bluetext.com">http://www.bluetext.com</a>, <a target="_blank" href="http://www.zealousweb.com">http://www.zealousweb.com</a>
+                        </p>
+                        <p>
+                            <strong>Files </strong> <br>
+                            <a target="_blank" href="http://www.zealousweb.com">file1</a>, <a target="_blank" href="http://www.bluetext.com">file2</a>, <a target="_blank" href="http://www.zealousweb.com">file3</a>
+                        </p>
+                        <p>
+                            <strong>Tags </strong> <br>
+                            tag1, tag2
+                        </p>
+                        <p>
+                            <strong>Description </strong> <br>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </p>
+                        <p>
+                            <strong>Notes </strong> <br>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                        </p>
+                        <p>
+                            <strong>Staus </strong> <br>
+                            Open
+                        </p>
+                    </div>
+                    </div>
+                    <div class="modal-footer">                        
+                        <button type="button" class="btn blue" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        
         <!-- END PAGE CONTENT -->
         </div>
     <!-- END PAGE CONTAINER -->
@@ -543,7 +400,7 @@
     <!-- The XDomainRequest Transport is included for cross-domain file deletion for IE 8 and IE 9 -->
     <!--[if (gte IE 8)&(lt IE 10)]><script src="/assets/jquery-file-upload/js/cors/jquery.xdr-transport.js"></script><![endif]-->
     <!-- END:File Upload Plugin JS files-->
-
+    <script src="/assets/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
     <!-- END CORE PLUGINS -->
     <!-- BEGIN PAGE PLUGINS & SCRIPTS -->
     <script type="text/javascript" src="/assets/bootstrap-select/bootstrap-select.min.js"></script>
@@ -555,6 +412,7 @@
     <script src="/assets/metronic.js" type="text/javascript"></script>
     <script src="/assets/layout.js" type="text/javascript"></script>
     <script src="/assets/demo.js" type="text/javascript"></script>
+    <script src="/assets/form-validation.js"></script>
     <script src="/assets/project-detail.js"></script>
     <script src="/assets/mail-script.js" type="text/javascript"></script>
 
@@ -566,7 +424,7 @@
             Layout.init(); // init current layout
             Demo.init(); // init demo features
             ComponentsPickers.init();
-            
+            FormValidation.init();
             Inbox.init();
             $('.select2me').select2({
                 placeholder: "Select an option",

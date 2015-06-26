@@ -92,7 +92,7 @@ var Inbox = function () {
 
     var initWysihtml5 = function () {
         $('.inbox-wysihtml5').wysihtml5({
-            "stylesheets": ["plugins/bootstrap-wysihtml5/wysiwyg-color.css"]
+            "stylesheets": ["../../assets/global/plugins/bootstrap-wysihtml5/wysiwyg-color.css"]
         });
     }
 
@@ -101,14 +101,14 @@ var Inbox = function () {
         $('#fileupload').fileupload({
             // Uncomment the following to send cross-domain cookies:
             //xhrFields: {withCredentials: true},
-            url: 'plugins/jquery-file-upload/server/php/',
+            url: '../../assets/global/plugins/jquery-file-upload/server/php/',
             autoUpload: true
         });
 
         // Upload server status check for browsers with CORS support:
         if ($.support.cors) {
             $.ajax({
-                url: 'plugins/jquery-file-upload/server/php/',
+                url: '../../assets/global/plugins/jquery-file-upload/server/php/',
                 type: 'HEAD'
             }).fail(function () {
                 $('<span class="alert alert-error"/>')
@@ -120,7 +120,7 @@ var Inbox = function () {
     }
 
     var loadCompose = function (el) {
-        var url = 'compose_message.html';
+        var url = 'inbox_compose.html';
 
         loading.show();
         content.html('');
@@ -146,22 +146,8 @@ var Inbox = function () {
                 initWysihtml5();
 
                 $('.inbox-wysihtml5').focus();
-                //Layout.fixContentHeight();
+                Layout.fixContentHeight();
                 Metronic.initUniform();
-                
-                $('#compose_massage').summernote({
-                    height: 200,
-                    disableLinkTarget: true,     // hide link Target Checkbox
-                    disableDragAndDrop: true,    // disable drag and drop event
-                    disableResizeEditor: true,
-                    toolbar: [
-                        ['style', ['bold', 'italic', 'underline']],
-                        ['para', ['ul', 'ol', 'paragraph']],
-                        ['height', ['height']],
-                        ['insert', ['picture', 'link']], // no insert buttons
-                        ['help', ['help']] //no help button
-                    ]
-                });
             },
             error: function(xhr, ajaxOptions, thrownError)
             {
@@ -282,10 +268,10 @@ var Inbox = function () {
         init: function () {
 
             // handle compose btn click
-          /*  $('.inbox').on('click', '.compose-btn a', function () {
+            $('.inbox').on('click', '.compose-btn a', function () {
                 loadCompose($(this));
-            });*/
-            
+            });
+
             // handle discard btn
             $('.inbox').on('click', '.inbox-discard-btn', function(e) {
                 e.preventDefault();
@@ -299,8 +285,7 @@ var Inbox = function () {
 
             // handle view message
             $('.inbox-content').on('click', '.view-message', function () {
-                /*loadMessage($(this));*/
-                window.location.href = "message_center-discussion-thread.html";
+                loadMessage($(this));
             });
 
             // handle inbox listing
